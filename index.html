@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Georgia, "Times New Roman", serif;
             background: #f7f1ff;
@@ -186,6 +190,12 @@
             transition: 0.25s;
         }
 
+        a.card {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 13px 30px rgba(91, 61, 120, 0.16);
@@ -252,7 +262,6 @@
         }
 
         @media (max-width: 700px) {
-
             header h1 {
                 font-size: 38px;
             }
@@ -289,7 +298,7 @@
     <a href="#home">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
     <a href="#mod">Mod</a>
-    <a href="#guide">Guide</a>
+    <a href="guide.html">Guide</a>
     <a href="#contatti">Contatti</a>
 </nav>
 
@@ -366,38 +375,38 @@
 
         <div class="cards">
 
-            <div class="card">
+            <a href="guide.html" class="card">
                 <div class="card-icon">⌘</div>
                 <h3>Installare le mod</h3>
                 <p>
                     Guide semplici per installare correttamente
                     mod e traduzioni nel gioco.
                 </p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="traduzioni.html" class="card">
                 <div class="card-icon">✎</div>
                 <h3>Traduzioni</h3>
                 <p>
                     Informazioni utili sulle traduzioni italiane
                     e sul loro utilizzo.
                 </p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#aggiornamenti" class="card">
                 <div class="card-icon">✦</div>
                 <h3>Aggiornamenti</h3>
                 <p>
                     Informazioni sugli aggiornamenti delle mod
                     e delle relative traduzioni.
                 </p>
-            </div>
+            </a>
 
         </div>
 
     </section>
 
-    <section>
+    <section id="aggiornamenti">
 
         <h2 class="section-title">Ultimi aggiornamenti</h2>
 
@@ -408,8 +417,8 @@
             <div class="updates-icon">✦</div>
 
             <p>
-                Nuove traduzioni e aggiornamenti arriveranno
-                prossimamente su Aiznun.
+                Qui verranno pubblicati gli ultimi aggiornamenti
+                delle mod e delle traduzioni disponibili su Aiznun.
             </p>
 
         </div>
