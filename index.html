@@ -1,421 +1,317 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aiznun | The Sims 4</title>
+    <title>Aiznun | The Sims 4</title>
 
-<style>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f1ff;
+            color: #30233d;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #faf7ff;
-    color: #33243f;
-}
+        header {
+            background: linear-gradient(135deg, #8e6bbd, #b99be8);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-header {
-    background: linear-gradient(135deg, #cda9f5, #8f5fc4);
-    color: white;
-    text-align: center;
-    padding: 55px 20px 45px;
-}
+        header h1 {
+            font-size: 48px;
+            letter-spacing: 7px;
+            margin-bottom: 12px;
+        }
 
-.logo {
-    font-size: 58px;
-    font-weight: 900;
-    letter-spacing: 8px;
-}
+        header p {
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
 
-.subtitle {
-    margin-top: 10px;
-    font-size: 17px;
-    letter-spacing: 2px;
-}
+        nav {
+            background: white;
+            text-align: center;
+            padding: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: white;
-    box-shadow: 0 3px 15px rgba(90,50,120,0.12);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        nav a {
+            color: #6d4c91;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-nav a {
-    color: #603b7d;
-    text-decoration: none;
-    padding: 18px 22px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        nav a:hover {
+            color: #a47bd1;
+        }
 
-nav a:hover {
-    background: #eee1ff;
-    color: #8b4fc0;
-}
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.hero {
-    max-width: 1100px;
-    margin: 45px auto;
-    padding: 70px 30px;
-    border-radius: 30px;
-    text-align: center;
-    background: linear-gradient(135deg, #eee2ff, #d5b8f5);
-    box-shadow: 0 10px 35px rgba(110,70,150,0.15);
-}
+        .hero h2 {
+            font-size: 42px;
+            color: #6d4c91;
+            margin-bottom: 20px;
+        }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 18px;
-    color: #573174;
-}
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #665b70;
+            font-size: 17px;
+        }
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.8;
-}
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: #6d4c91;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
 
-.button {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 14px 28px;
-    background: #7b4aa5;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .button:hover {
+            background: #573875;
+        }
 
-.button:hover {
-    background: #603680;
-    transform: translateY(-2px);
-}
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 20px;
+        }
 
-section {
-    max-width: 1100px;
-    margin: 70px auto;
-    padding: 0 25px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #6d4c91;
+            margin-bottom: 40px;
+        }
 
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    color: #633c80;
-    margin-bottom: 35px;
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.10);
+            border: 1px solid #eadcf8;
+            text-align: center;
+        }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    box-shadow: 0 8px 25px rgba(80,50,100,0.10);
-    text-align: center;
-    transition: 0.3s;
-    border: 1px solid #eee3f8;
-}
+        .card h3 {
+            color: #4d3567;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
 
-.card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 14px 30px rgba(90,50,120,0.18);
-}
+        .card p {
+            color: #665b70;
+            line-height: 1.6;
+            font-size: 14px;
+        }
 
-.card-icon {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
+        .updates {
+            background: white;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.10);
+            border: 1px solid #eadcf8;
+        }
 
-.card h3 {
-    color: #704493;
-    margin-bottom: 10px;
-    font-size: 22px;
-}
+        .updates p {
+            color: #665b70;
+            line-height: 1.7;
+            text-align: center;
+        }
 
-.card p {
-    color: #665d6c;
-    line-height: 1.6;
-}
+        .contact {
+            text-align: center;
+        }
 
-.about {
-    background: white;
-    padding: 45px;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(80,50,100,0.10);
-    text-align: center;
-}
+        .contact p {
+            color: #665b70;
+            line-height: 1.7;
+        }
 
-.about p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.9;
-    color: #5d5363;
-}
+        footer {
+            background: #30233d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+            margin-top: 40px;
+        }
 
-.latest {
-    background: #f0e6fa;
-    padding: 45px;
-    border-radius: 25px;
-}
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 36px;
+            }
 
-.latest-item {
-    background: white;
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
+            .hero h2 {
+                font-size: 32px;
+            }
 
-.latest-item strong {
-    color: #633c80;
-}
+            .cards {
+                grid-template-columns: 1fr;
+            }
 
-.latest-item span {
-    background: #dcc5f2;
-    color: #603b7d;
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    margin-bottom: 20px;
-}
-
-footer {
-    margin-top: 80px;
-    padding: 35px 20px;
-    background: #33243f;
-    color: #ddd;
-    text-align: center;
-}
-
-footer strong {
-    color: #cba4ef;
-}
-
-@media (max-width: 750px) {
-
-    .logo {
-        font-size: 42px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    nav a {
-        padding: 13px 12px;
-        font-size: 14px;
-    }
-
-    .latest-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-}
-
-</style>
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header id="home">
-
-    <div class="logo">AIZNUN</div>
-
-    <div class="subtitle">
-        THE SIMS 4 • MOD • TRADUZIONI • CC
-    </div>
-
+<header>
+    <h1>AIZNUN</h1>
+    <p>THE SIMS 4 • MOD • TRADUZIONI</p>
 </header>
 
 <nav>
-
     <a href="#home">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
     <a href="#mod">Mod</a>
-    <a href="#cc">CC</a>
     <a href="#guide">Guide</a>
     <a href="#contatti">Contatti</a>
-
 </nav>
 
-<section class="hero">
+<main>
 
-    <h1>Benvenuti su Aiznun</h1>
-
-    <p>
-        Il mio piccolo angolo dedicato a The Sims 4,
-        dove trovare traduzioni, mod, contenuti personalizzati,
-        guide e tutto ciò che rende il gioco ancora più speciale.
-    </p>
-
-    <a href="traduzioni.html" class="button">
-        Scopri le traduzioni
-    </a>
-
-</section>
-
-<section id="mod">
-
-    <h2 class="section-title">Mod</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="card-icon">♛</div>
-            <h3>Gameplay</h3>
-            <p>Mod che aggiungono nuove possibilità al gameplay.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">☾</div>
-            <h3>Fantasy</h3>
-            <p>Regni, magia, creature e avventure per il tuo mondo Sims.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">♡</div>
-            <h3>Romance</h3>
-            <p>Nuove interazioni e contenuti dedicati alle relazioni.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="cc">
-
-    <h2 class="section-title">Custom Content</h2>
-
-    <div class="about">
+    <section class="hero" id="home">
+        <h2>Benvenuti su Aiznun</h2>
 
         <p>
-            Una sezione dedicata al Custom Content di The Sims 4:
-            capelli, vestiti, arredamento, makeup e tanto altro.
+            Uno spazio dedicato a The Sims 4, alle mod e alle traduzioni
+            italiane. Qui troverai traduzioni realizzate da AIZNUN,
+            informazioni sulle mod e guide per arricchire il tuo gioco.
         </p>
 
-    </div>
+        <a class="button" href="traduzioni.html">
+            SCOPRI LE TRADUZIONI
+        </a>
+    </section>
 
-</section>
+    <section id="mod">
+        <h2 class="section-title">Mod</h2>
 
-<section id="guide">
+        <div class="cards">
 
-    <h2 class="section-title">Guide</h2>
+            <div class="card">
+                <h3>Gameplay</h3>
+                <p>
+                    Mod che aggiungono nuove possibilità e funzionalità
+                    al gameplay di The Sims 4.
+                </p>
+            </div>
 
-    <div class="cards">
+            <div class="card">
+                <h3>Fantasy</h3>
+                <p>
+                    Mod dedicate a regni, magia, avventure e atmosfere
+                    fantasy.
+                </p>
+            </div>
 
-        <div class="card">
-
-            <div class="card-icon">♡</div>
-            <h3>Guide per principianti</h3>
-            <p>Consigli semplici per iniziare a giocare e scoprire The Sims 4.</p>
+            <div class="card">
+                <h3>Romance</h3>
+                <p>
+                    Mod che ampliano relazioni, romanticismo e
+                    interazioni tra i Sims.
+                </p>
+            </div>
 
         </div>
+    </section>
 
-        <div class="card">
+    <section id="guide">
+        <h2 class="section-title">Guide</h2>
 
-            <div class="card-icon">⚙</div>
-            <h3>Mod e CC</h3>
-            <p>Come installare, organizzare e gestire mod e contenuti personalizzati.</p>
+        <div class="cards">
+
+            <div class="card">
+                <h3>Installare le mod</h3>
+                <p>
+                    Guide semplici per installare correttamente
+                    mod e traduzioni nel gioco.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Traduzioni</h3>
+                <p>
+                    Informazioni e consigli per utilizzare
+                    correttamente le traduzioni italiane.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Aggiornamenti</h3>
+                <p>
+                    Informazioni sugli aggiornamenti delle mod
+                    e delle relative traduzioni.
+                </p>
+            </div>
 
         </div>
+    </section>
 
-        <div class="card">
+    <section>
+        <h2 class="section-title">Ultimi aggiornamenti</h2>
 
-            <div class="card-icon">✦</div>
-            <h3>Consigli</h3>
-            <p>Trucchi, suggerimenti e idee per rendere il tuo gioco ancora più divertente.</p>
-
+        <div class="updates">
+            <p>
+                Nuove traduzioni e contenuti per Aiznun arriveranno
+                prossimamente.
+            </p>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<section>
-
-    <h2 class="section-title">Ultimi aggiornamenti</h2>
-
-    <div class="latest">
-
-        <div class="latest-item">
-            <strong>Nuova traduzione disponibile</strong>
-            <span>TRADUZIONE</span>
-        </div>
-
-        <div class="latest-item">
-            <strong>Nuove mod in arrivo</strong>
-            <span>MOD</span>
-        </div>
-
-        <div class="latest-item">
-            <strong>Aiznun è online!</strong>
-            <span>NEWS</span>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="contatti">
-
-    <h2 class="section-title">Contatti</h2>
-
-    <div class="contact">
+    <section class="contact" id="contatti">
+        <h2 class="section-title">Contatti</h2>
 
         <p>
-            Per collaborazioni, richieste o semplicemente per scrivermi,
-            puoi contattarmi qui.
+            Per informazioni sulle traduzioni o sul sito,
+            puoi contattare AIZNUN.
         </p>
 
-        <a href="#" class="button">Scrivimi</a>
+        <a class="button" href="#">
+            SCRIVIMI
+        </a>
+    </section>
 
-    </div>
-
-</section>
+</main>
 
 <footer>
-
-    <p>
-        © 2026 <strong>Aiznun</strong> — Fan site dedicato a The Sims 4
-    </p>
-
-    <p>
-        Non affiliato con Electronic Arts o Maxis.
-    </p>
-
+    © 2026 AIZNUN — The Sims 4 Fan Site<br>
+    Non affiliato con Electronic Arts o Maxis.
 </footer>
 
 </body>
