@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compatibilità Mod & Traduzioni | Aiznun</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#f7f1ff;
+    color:#30233d;
+}
+
+header{
+    background:linear-gradient(135deg,#76519f,#b99be8,#d8c4f2);
+    color:white;
+    text-align:center;
+    padding:60px 20px 50px;
+}
+
+header h1{
+    font-size:48px;
+    letter-spacing:8px;
+}
+
+header p{
+    font-family:Arial,sans-serif;
+    margin-top:12px;
+    letter-spacing:3px;
+    font-size:13px;
+}
+
+nav{
+    background:white;
+    text-align:center;
+    padding:19px;
+    box-shadow:0 3px 15px rgba(70,45,90,.10);
+}
+
+nav a{
+    color:#68458b;
+    text-decoration:none;
+    margin:0 14px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.crown{
+    font-size:40px;
+    color:#8e6bbd;
+}
+
+.intro h2{
+    color:#68458b;
+    font-size:38px;
+    margin:12px 0;
+}
+
+.decoration{
+    color:#a27bc9;
+    letter-spacing:8px;
+    font-size:21px;
+    margin-bottom:20px;
+}
+
+.intro p{
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.8;
+    max-width:800px;
+    margin:auto;
+}
+
+.patch{
+    background:linear-gradient(135deg,#fff,#f0e5fa);
+    border:1px solid #dcc8f0;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(91,61,120,.10);
+    margin-bottom:30px;
+}
+
+.patch small{
+    font-family:Arial,sans-serif;
+    color:#8e6bbd;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.patch h3{
+    font-size:28px;
+    color:#4d3567;
+    margin:10px 0;
+}
+
+.patch p{
+    font-family:Arial,sans-serif;
+    color:#665b70;
+}
+
+.legend{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:25px 0;
+    font-family:Arial,sans-serif;
+}
+
+.badge{
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.compatibile{
+    background:#dff3e5;
+    color:#347348;
+}
+
+.verifica{
+    background:#fff0c9;
+    color:#896a19;
+}
+
+.aggiornare{
+    background:#f8dde3;
+    color:#984354;
+}
+
+.noncompatibile{
+    background:#f2d6d6;
+    color:#8d3333;
+}
+
+.traduzione{
+    background:#e7def7;
+    color:#68458b;
+}
+
+.tools{
+    background:white;
+    border:1px solid #eadcf8;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:22px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    box-shadow:0 8px 25px rgba(91,61,120,.08);
+}
+
+.tools input,
+.tools select{
+    border:1px solid #d8c4f2;
+    border-radius:25px;
+    padding:12px 17px;
+    font-family:Arial,sans-serif;
+    color:#4d3567;
+    background:#fbf8fe;
+    outline:none;
+}
+
+.tools input{
+    flex:1;
+    min-width:220px;
+}
+
+.table-wrap{
+    overflow-x:auto;
+    background:white;
+    border-radius:22px;
+    border:1px solid #eadcf8;
+    box-shadow:0 8px 25px rgba(91,61,120,.10);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:1150px;
+    font-family:Arial,sans-serif;
+}
+
+th{
+    background:#76519f;
+    color:white;
+    padding:17px 13px;
+    font-size:12px;
+    text-align:left;
+}
+
+td{
+    padding:17px 13px;
+    border-bottom:1px solid #eee3f8;
+    color:#5f5369;
+    font-size:13px;
+    vertical-align:middle;
+}
+
+tbody tr:hover{
+    background:#fbf8fe;
+}
+
+.mod{
+    font-weight:bold;
+    color:#68458b;
+}
+
+.link{
+    display:inline-block;
+    background:#76519f;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    padding:8px 13px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.link:hover{
+    background:#593878;
+}
+
+.originale{
+    background:#eee5f8;
+    color:#68458b;
+}
+
+.originale:hover{
+    background:#dfcff0;
+}
+
+.note{
+    margin-top:25px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid #eadcf8;
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.8;
+}
+
+.back{
+    text-align:center;
+    margin-top:40px;
+}
+
+.back a{
+    display:inline-block;
+    background:#76519f;
+    color:white;
+    text-decoration:none;
+    padding:14px 27px;
+    border-radius:30px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+}
+
+footer{
+    background:#30233d;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    line-height:1.8;
+}
+
+@media(max-width:700px){
+    header h1{font-size:36px}
+    nav a{display:inline-block;margin:6px 8px}
+    .intro h2{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AIZNUN</h1>
+    <p>THE SIMS 4 • MOD • TRADUZIONI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="traduzioni.html">Traduzioni</a>
+    <a href="index.html#mod">Mod</a>
+    <a href="guide.html">Guide</a>
+    <a href="aggiornamenti.html">Aggiornamenti</a>
+    <a href="index.html#contatti">Contatti</a>
+</nav>
+
+<main class="container">
+
+<section class="intro">
+    <div class="crown">♕</div>
+
+    <h2>Compatibilità Mod & Traduzioni</h2>
+
+    <div class="decoration">✦ ♡ ✦</div>
+
+    <p>
+        Controlla lo stato delle mod presenti su Aiznun,
+        gli aggiornamenti e la disponibilità delle relative
+        traduzioni italiane.
+    </p>
+</section>
+
+<section class="patch">
+    <small>PATCH THE SIMS 4</small>
+
+    <h3>Patch 1.128.90 • 22/09/2026</h3>
+
+    <p>
+        Gli stati vengono aggiornati quando sono disponibili
+        informazioni attendibili sulla compatibilità delle mod.
+    </p>
+</section>
+
+<div class="legend">
+    <span class="badge compatibile">COMPATIBILE</span>
+    <span class="badge verifica">IN VERIFICA</span>
+    <span class="badge aggiornare">DA AGGIORNARE</span>
+    <span class="badge noncompatibile">NON COMPATIBILE</span>
+    <span class="badge traduzione">TRADUZIONE DISPONIBILE</span>
+</div>
+
+<div class="tools">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Cerca una mod o un autore..."
+        onkeyup="filterTable()"
+    >
+
+    <select id="statusFilter" onchange="filterTable()">
+        <option value="">Tutti gli stati</option>
+        <option value="COMPATIBILE">Compatibile</option>
+        <option value="IN VERIFICA">In verifica</option>
+        <option value="DA AGGIORNARE">Da aggiornare</option>
+        <option value="NON COMPATIBILE">Non compatibile</option>
+    </select>
+
+</div>
+
+<div class="table-wrap">
+
+<table id="modsTable">
+
+<thead>
+<tr>
+    <th>AUTORE</th>
+    <th>MOD</th>
+    <th>MOD ORIGINALE</th>
+    <th>STATO PATCH</th>
+    <th>ULTIMO AGGIORNAMENTO MOD</th>
+    <th>STATO TRADUZIONE</th>
+    <th>TRADUZIONE AIZNUN</th>
+    <th>ULTIMO AGGIORNAMENTO TRADUZIONE</th>
+    <th>REQUISITI / NOTE</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>adeepindigo</td>
+
+    <td class="mod">
+        Connected Sims
+    </td>
+
+    <td>
+        <a
+            class="link originale"
+            href="https://adeepindigomods.itch.io/connected-sims"
+            target="_blank"
+            rel="noopener noreferrer">
+            MOD ORIGINALE
+        </a>
+    </td>
+
+    <td>
+        <span class="badge verifica">
+            IN VERIFICA
+        </span>
+    </td>
+
+    <td>—</td>
+
+    <td>
+        <span class="badge traduzione">
+            DISPONIBILE
+        </span>
+    </td>
+
+    <td>
+        <a
+            class="link"
+            href="traduzioni.html">
+            VEDI TRADUZIONE
+        </a>
+    </td>
+
+    <td>2026</td>
+
+    <td>
+        Controlla sempre eventuali requisiti
+        indicati dal creatore della mod.
+    </td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="note">
+    <strong>Come leggere la tabella:</strong><br>
+
+    <strong>Compatibile</strong> indica una compatibilità confermata
+    con la patch indicata.
+
+    <strong>In verifica</strong> significa che la compatibilità
+    non è ancora stata confermata.
+
+    <strong>Da aggiornare</strong> indica che è necessario attendere
+    o installare un aggiornamento della mod.
+
+    <strong>Non compatibile</strong> indica che la versione controllata
+    presenta problemi con la patch indicata.
+
+    Lo stato della traduzione è separato dallo stato della mod:
+    una traduzione può essere disponibile anche mentre la compatibilità
+    della mod originale è ancora in verifica.
+</div>
+
+<div class="back">
+    <a href="index.html">TORNA ALLA HOME</a>
+</div>
+
+</main>
+
+<footer>
+    © 2026 AIZNUN — The Sims 4 Fan Site<br>
+    Non affiliato con Electronic Arts o Maxis.
+</footer>
+
+<script>
+function filterTable() {
+
+    const search =
+        document.getElementById("search").value.toLowerCase();
+
+    const status =
+        document.getElementById("statusFilter").value.toLowerCase();
+
+    const rows =
+        document.querySelectorAll("#modsTable tbody tr");
+
+    rows.forEach(row => {
+
+        const text =
+            row.innerText.toLowerCase();
+
+        const matchesSearch =
+            text.includes(search);
+
+        const matchesStatus =
+            status === "" || text.includes(status);
+
+        if (matchesSearch && matchesStatus) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+
+    });
+}
+</script>
+
+</body>
+</html>
