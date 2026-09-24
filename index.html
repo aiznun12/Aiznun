@@ -1,367 +1,434 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aiznun | The Sims 4</title>
+<title>Aiznun | The Sims 4</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: #f7f1ff;
-            color: #30233d;
-        }
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#f7f1ff;
+    color:#30233d;
+}
 
-        header {
-            background: linear-gradient(135deg, #76519f, #b99be8, #d8c4f2);
-            color: white;
-            text-align: center;
-            padding: 65px 20px 55px;
-            position: relative;
-            overflow: hidden;
-        }
+header{
+    background:linear-gradient(135deg,#76519f,#b99be8,#d8c4f2);
+    color:white;
+    text-align:center;
+    padding:65px 20px 55px;
+    position:relative;
+    overflow:hidden;
+}
 
-        header::before,
-        header::after {
-            content: "✦";
-            position: absolute;
-            font-size: 70px;
-            opacity: 0.18;
-        }
+header::before,
+header::after{
+    content:"✦";
+    position:absolute;
+    font-size:70px;
+    opacity:.18;
+}
 
-        header::before {
-            left: 10%;
-            top: 20px;
-        }
+header::before{
+    left:10%;
+    top:20px;
+}
 
-        header::after {
-            right: 10%;
-            bottom: 15px;
-        }
+header::after{
+    right:10%;
+    bottom:15px;
+}
 
-        header h1 {
-            font-size: 52px;
-            letter-spacing: 9px;
-            margin-bottom: 14px;
-        }
+header h1{
+    font-size:52px;
+    letter-spacing:9px;
+    margin-bottom:14px;
+}
 
-        header p {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            letter-spacing: 3px;
-        }
+header p{
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    letter-spacing:3px;
+}
 
-        nav {
-            background: white;
-            text-align: center;
-            padding: 19px;
-            box-shadow: 0 3px 15px rgba(70,45,90,0.10);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+nav{
+    background:white;
+    text-align:center;
+    padding:19px;
+    box-shadow:0 3px 15px rgba(70,45,90,.10);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
 
-        nav a {
-            color: #68458b;
-            text-decoration: none;
-            margin: 0 15px;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 14px;
-        }
+nav a{
+    color:#68458b;
+    text-decoration:none;
+    margin:0 15px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    font-size:14px;
+}
 
-        nav a:hover {
-            color: #a27bc9;
-        }
+nav a:hover{
+    color:#a27bc9;
+}
 
-        .hero {
-            text-align: center;
-            max-width: 950px;
-            margin: 55px auto 0;
-            padding: 70px 30px;
-            background: white;
-            border-radius: 30px;
-            box-shadow: 0 12px 35px rgba(91,61,120,0.12);
-            border: 1px solid #eadcf8;
-            position: relative;
-            overflow: hidden;
-        }
+.hero{
+    text-align:center;
+    max-width:950px;
+    margin:55px auto 0;
+    padding:70px 30px;
+    background:white;
+    border-radius:30px;
+    box-shadow:0 12px 35px rgba(91,61,120,.12);
+    border:1px solid #eadcf8;
+    position:relative;
+    overflow:hidden;
+}
 
-        .hero::before {
-            content: "♕";
-            position: absolute;
-            font-size: 180px;
-            color: #f0e5fa;
-            right: -20px;
-            bottom: -55px;
-        }
+.hero::before{
+    content:"♕";
+    position:absolute;
+    font-size:180px;
+    color:#f0e5fa;
+    right:-20px;
+    bottom:-55px;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+.hero-content{
+    position:relative;
+    z-index:1;
+}
 
-        .crown {
-            font-size: 40px;
-            color: #8e6bbd;
-            margin-bottom: 15px;
-        }
+.crown{
+    font-size:40px;
+    color:#8e6bbd;
+    margin-bottom:15px;
+}
 
-        .hero h2 {
-            font-size: 44px;
-            color: #68458b;
-            margin-bottom: 20px;
-        }
+.hero h2{
+    font-size:44px;
+    color:#68458b;
+    margin-bottom:20px;
+}
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.8;
-            color: #665b70;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-        }
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    color:#665b70;
+    font-family:Arial,sans-serif;
+    font-size:16px;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 14px 30px;
-            background: #76519f;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            transition: 0.2s;
-            box-shadow: 0 5px 15px rgba(118,81,159,0.25);
-        }
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#76519f;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    transition:.2s;
+    box-shadow:0 5px 15px rgba(118,81,159,.25);
+}
 
-        .button:hover {
-            background: #593878;
-            transform: translateY(-2px);
-        }
+.button:hover{
+    background:#593878;
+    transform:translateY(-2px);
+}
 
-        section {
-            max-width: 1050px;
-            margin: auto;
-            padding: 75px 20px;
-        }
+section{
+    max-width:1050px;
+    margin:auto;
+    padding:75px 20px;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            color: #68458b;
-            margin-bottom: 12px;
-        }
+.section-title{
+    text-align:center;
+    font-size:34px;
+    color:#68458b;
+    margin-bottom:12px;
+}
 
-        .section-decoration {
-            text-align: center;
-            color: #a27bc9;
-            font-size: 22px;
-            margin-bottom: 38px;
-            letter-spacing: 8px;
-        }
+.section-decoration{
+    text-align:center;
+    color:#a27bc9;
+    font-size:22px;
+    margin-bottom:38px;
+    letter-spacing:8px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
 
-        .card {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 23px;
-            box-shadow: 0 8px 25px rgba(91,61,120,0.10);
-            border: 1px solid #eadcf8;
-            text-align: center;
-            transition: 0.25s;
-        }
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:23px;
+    box-shadow:0 8px 25px rgba(91,61,120,.10);
+    border:1px solid #eadcf8;
+    text-align:center;
+    transition:.25s;
+}
 
-        a.card {
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
+a.card{
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 13px 30px rgba(91,61,120,0.16);
-        }
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 13px 30px rgba(91,61,120,.16);
+}
 
-        .card-icon {
-            font-size: 36px;
-            margin-bottom: 17px;
-            color: #8e6bbd;
-        }
+.card-icon{
+    font-size:36px;
+    margin-bottom:17px;
+    color:#8e6bbd;
+}
 
-        .card h3 {
-            color: #4d3567;
-            margin-bottom: 14px;
-            font-size: 22px;
-        }
+.card h3{
+    color:#4d3567;
+    margin-bottom:14px;
+    font-size:22px;
+}
 
-        .card p {
-            color: #665b70;
-            line-height: 1.7;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
+.card p{
+    color:#665b70;
+    line-height:1.7;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+}
 
-        /* AGGIORNAMENTI */
+/* +18 */
 
-        .updates-box {
-            background: linear-gradient(135deg, #ffffff, #f0e5fa);
-            border: 1px solid #dcc8f0;
-            border-radius: 30px;
-            padding: 48px 35px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(91,61,120,0.11);
-            position: relative;
-            overflow: hidden;
-        }
+.adult-preview{
+    max-width:1050px;
+    margin:0 auto;
+    padding:0 20px 75px;
+}
 
-        .updates-box::after {
-            content: "♕";
-            position: absolute;
-            right: -10px;
-            bottom: -55px;
-            font-size: 160px;
-            color: #e9daf7;
-            opacity: 0.55;
-        }
+.adult-box{
+    background:linear-gradient(135deg,#f0e5fa,#ffffff);
+    border:1px solid #dcc8f0;
+    border-radius:28px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(91,61,120,.10);
+    position:relative;
+    overflow:hidden;
+}
 
-        .updates-content {
-            position: relative;
-            z-index: 1;
-        }
+.adult-box::after{
+    content:"18+";
+    position:absolute;
+    right:-10px;
+    bottom:-30px;
+    font-family:Arial,sans-serif;
+    font-size:115px;
+    font-weight:bold;
+    color:#eadcf8;
+    opacity:.65;
+}
 
-        .patch-label {
-            font-family: Arial, sans-serif;
-            color: #8e6bbd;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-        }
+.adult-content{
+    position:relative;
+    z-index:1;
+}
 
-        .updates-box h3 {
-            color: #4d3567;
-            font-size: 29px;
-            margin-bottom: 16px;
-        }
+.adult-icon{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#76519f;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 16px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    box-shadow:0 5px 15px rgba(118,81,159,.25);
+}
 
-        .updates-box p {
-            max-width: 700px;
-            margin: auto;
-            font-family: Arial, sans-serif;
-            color: #665b70;
-            line-height: 1.8;
-        }
+.adult-box h3{
+    color:#4d3567;
+    font-size:27px;
+    margin-bottom:12px;
+}
 
-        .status-preview {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 25px;
-        }
+.adult-box p{
+    max-width:650px;
+    margin:auto;
+    color:#665b70;
+    line-height:1.8;
+    font-family:Arial,sans-serif;
+}
 
-        .status {
-            font-family: Arial, sans-serif;
-            padding: 8px 13px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: bold;
-        }
+/* AGGIORNAMENTI */
 
-        .compatible {
-            background: #dff3e5;
-            color: #347348;
-        }
+.updates-box{
+    background:linear-gradient(135deg,#ffffff,#f0e5fa);
+    border:1px solid #dcc8f0;
+    border-radius:30px;
+    padding:48px 35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(91,61,120,.11);
+    position:relative;
+    overflow:hidden;
+}
 
-        .checking {
-            background: #fff0c9;
-            color: #896a19;
-        }
+.updates-box::after{
+    content:"♕";
+    position:absolute;
+    right:-10px;
+    bottom:-55px;
+    font-size:160px;
+    color:#e9daf7;
+    opacity:.55;
+}
 
-        .update {
-            background: #f8dde3;
-            color: #984354;
-        }
+.updates-content{
+    position:relative;
+    z-index:1;
+}
 
-        .translation {
-            background: #e7def7;
-            color: #68458b;
-        }
+.patch-label{
+    font-family:Arial,sans-serif;
+    color:#8e6bbd;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
 
-        .contact {
-            text-align: center;
-        }
+.updates-box h3{
+    color:#4d3567;
+    font-size:29px;
+    margin-bottom:16px;
+}
 
-        .contact p {
-            color: #665b70;
-            line-height: 1.8;
-            font-family: Arial, sans-serif;
-        }
+.updates-box p{
+    max-width:700px;
+    margin:auto;
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.8;
+}
 
-        .email {
-            margin-top: 15px;
-            font-family: Arial, sans-serif;
-            color: #68458b;
-            font-weight: bold;
-        }
+.status-preview{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:25px;
+}
 
-        footer {
-            background: #30233d;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            line-height: 1.8;
-            margin-top: 30px;
-        }
+.status{
+    font-family:Arial,sans-serif;
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
 
-        @media (max-width: 700px) {
-            header h1 {
-                font-size: 38px;
-            }
+.compatible{
+    background:#dff3e5;
+    color:#347348;
+}
 
-            .hero {
-                margin: 30px 15px 0;
-                padding: 55px 20px;
-            }
+.checking{
+    background:#fff0c9;
+    color:#896a19;
+}
 
-            .hero h2 {
-                font-size: 32px;
-            }
+.update{
+    background:#f8dde3;
+    color:#984354;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+.translation{
+    background:#e7def7;
+    color:#68458b;
+}
 
-            nav a {
-                display: inline-block;
-                margin: 6px 8px;
-            }
+.contact{
+    text-align:center;
+}
 
-            .updates-box {
-                padding: 38px 22px;
-            }
-        }
-    </style>
+.contact p{
+    color:#665b70;
+    line-height:1.8;
+    font-family:Arial,sans-serif;
+}
+
+.email{
+    margin-top:15px;
+    font-family:Arial,sans-serif;
+    color:#68458b;
+    font-weight:bold;
+}
+
+footer{
+    background:#30233d;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    line-height:1.8;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    .hero{
+        margin:30px 15px 0;
+        padding:55px 20px;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px 8px;
+    }
+
+    .updates-box{
+        padding:38px 22px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -374,7 +441,7 @@
 <nav>
     <a href="#home">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
-    <a href="#mod">Mod</a>
+    <a href="mod.html">Mod</a>
     <a href="guide.html">Guide</a>
     <a href="aggiornamenti.html">Aggiornamenti</a>
     <a href="#contatti">Contatti</a>
@@ -382,213 +449,255 @@
 
 <main>
 
-    <section class="hero" id="home">
+<section class="hero" id="home">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="crown">♕</div>
+        <div class="crown">♕</div>
 
-            <h2>Benvenuti su Aiznun</h2>
-
-            <p>
-                Il tuo angolo italiano dedicato a The Sims 4,
-                alle mod e alle traduzioni italiane.
-                Scopri nuove storie, nuove possibilità e contenuti
-                per rendere il tuo gioco ancora più tuo.
-            </p>
-
-            <a class="button" href="traduzioni.html">
-                SCOPRI LE TRADUZIONI
-            </a>
-
-        </div>
-
-    </section>
-
-    <section id="mod">
-
-        <h2 class="section-title">Mod</h2>
-
-        <div class="section-decoration">✦ ♕ ✦</div>
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-icon">♟</div>
-
-                <h3>Gameplay</h3>
-
-                <p>
-                    Mod che aggiungono nuove possibilità,
-                    funzionalità e modi di vivere il gameplay
-                    di The Sims 4.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">♕</div>
-
-                <h3>Fantasy</h3>
-
-                <p>
-                    Regni, magia, avventure e atmosfere fantasy
-                    per trasformare il tuo mondo di gioco.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-icon">♡</div>
-
-                <h3>Romance</h3>
-
-                <p>
-                    Mod dedicate alle relazioni, al romanticismo
-                    e alle interazioni tra i Sims.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="guide">
-
-        <h2 class="section-title">Guide</h2>
-
-        <div class="section-decoration">✦ ♡ ✦</div>
-
-        <div class="cards">
-
-            <a href="guide.html#installare-mod" class="card">
-
-                <div class="card-icon">⌘</div>
-
-                <h3>Installare le mod</h3>
-
-                <p>
-                    Scopri come installare correttamente
-                    file .package e .ts4script in The Sims 4.
-                </p>
-
-            </a>
-
-            <a href="guide.html#traduzioni" class="card">
-
-                <div class="card-icon">✎</div>
-
-                <h3>Installare le traduzioni</h3>
-
-                <p>
-                    Scopri come inserire una traduzione italiana
-                    insieme alla mod originale.
-                </p>
-
-            </a>
-
-            <a href="guide.html#problemi" class="card">
-
-                <div class="card-icon">✦</div>
-
-                <h3>Problemi con le mod</h3>
-
-                <p>
-                    Cosa controllare quando una mod non appare,
-                    non funziona o crea problemi dopo una patch.
-                </p>
-
-            </a>
-
-        </div>
-
-    </section>
-
-    <section id="aggiornamenti">
-
-        <h2 class="section-title">
-            Ultimi aggiornamenti
-        </h2>
-
-        <div class="section-decoration">
-            ✦ ♕ ✦
-        </div>
-
-        <div class="updates-box">
-
-            <div class="updates-content">
-
-                <div class="patch-label">
-                    COMPATIBILITÀ THE SIMS 4
-                </div>
-
-                <h3>
-                    Patch 1.128.90 • 22/09/2026
-                </h3>
-
-                <p>
-                    Controlla quali mod e traduzioni presenti
-                    su Aiznun sono compatibili con la patch attuale,
-                    quali sono ancora in verifica e quali
-                    necessitano di un aggiornamento.
-                </p>
-
-                <div class="status-preview">
-
-                    <span class="status compatible">
-                        COMPATIBILE
-                    </span>
-
-                    <span class="status checking">
-                        IN VERIFICA
-                    </span>
-
-                    <span class="status update">
-                        DA AGGIORNARE
-                    </span>
-
-                    <span class="status translation">
-                        TRADUZIONI
-                    </span>
-
-                </div>
-
-                <a
-                    class="button"
-                    href="aggiornamenti.html">
-                    CONTROLLA COMPATIBILITÀ
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="contact" id="contatti">
-
-        <h2 class="section-title">
-            Contatti
-        </h2>
-
-        <div class="section-decoration">
-            ♡ ✦ ♡
-        </div>
+        <h2>Benvenuti su Aiznun</h2>
 
         <p>
-            Hai bisogno di informazioni su una traduzione
-            o sul sito? Contatta AIZNUN.
+            Il tuo angolo italiano dedicato a The Sims 4,
+            alle mod e alle traduzioni italiane.
+            Scopri nuove storie, nuove possibilità e contenuti
+            per rendere il tuo gioco ancora più tuo.
         </p>
 
-        <div class="email">
-            aiznun.contact@gmail.com
-        </div>
-
-        <a
-            class="button"
-            href="mailto:aiznun.contact@gmail.com?subject=Aiznun%20-%20Richiesta%20informazioni">
-            SCRIVIMI
+        <a class="button" href="traduzioni.html">
+            SCOPRI LE TRADUZIONI
         </a>
 
-    </section>
+    </div>
+
+</section>
+
+<!-- MOD -->
+
+<section id="mod">
+
+    <h2 class="section-title">Mod</h2>
+
+    <div class="section-decoration">✦ ♕ ✦</div>
+
+    <div class="cards">
+
+        <a class="card" href="mod.html#gameplay">
+
+            <div class="card-icon">♟</div>
+
+            <h3>Gameplay</h3>
+
+            <p>
+                Mod che aggiungono nuove possibilità,
+                funzionalità e modi di vivere il gameplay
+                di The Sims 4.
+            </p>
+
+        </a>
+
+        <a class="card" href="mod.html#fantasy">
+
+            <div class="card-icon">♕</div>
+
+            <h3>Fantasy</h3>
+
+            <p>
+                Regni, magia, avventure e atmosfere fantasy
+                per trasformare il tuo mondo di gioco.
+            </p>
+
+        </a>
+
+        <a class="card" href="mod.html#romance">
+
+            <div class="card-icon">♡</div>
+
+            <h3>Romance</h3>
+
+            <p>
+                Mod dedicate alle relazioni, al romanticismo
+                e alle interazioni tra i Sims.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- +18 SEPARATO -->
+
+<div class="adult-preview">
+
+    <div class="adult-box">
+
+        <div class="adult-content">
+
+            <div class="adult-icon">
+                18+
+            </div>
+
+            <h3>Contenuti +18</h3>
+
+            <p>
+                Una sezione separata dedicata alle mod per adulti
+                e alle relative traduzioni italiane.
+                Accesso riservato a utenti maggiorenni.
+            </p>
+
+            <a class="button" href="mod.html#adult">
+                ENTRA NELLA SEZIONE +18
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- GUIDE -->
+
+<section id="guide">
+
+    <h2 class="section-title">Guide</h2>
+
+    <div class="section-decoration">✦ ♡ ✦</div>
+
+    <div class="cards">
+
+        <a href="guide.html#installare-mod" class="card">
+
+            <div class="card-icon">⌘</div>
+
+            <h3>Installare le mod</h3>
+
+            <p>
+                Scopri come installare correttamente
+                file .package e .ts4script in The Sims 4.
+            </p>
+
+        </a>
+
+        <a href="guide.html#traduzioni" class="card">
+
+            <div class="card-icon">✎</div>
+
+            <h3>Installare le traduzioni</h3>
+
+            <p>
+                Scopri come inserire una traduzione italiana
+                insieme alla mod originale.
+            </p>
+
+        </a>
+
+        <a href="guide.html#problemi" class="card">
+
+            <div class="card-icon">✦</div>
+
+            <h3>Problemi con le mod</h3>
+
+            <p>
+                Cosa controllare quando una mod non appare,
+                non funziona o crea problemi dopo una patch.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- AGGIORNAMENTI -->
+
+<section id="aggiornamenti">
+
+    <h2 class="section-title">
+        Ultimi aggiornamenti
+    </h2>
+
+    <div class="section-decoration">
+        ✦ ♕ ✦
+    </div>
+
+    <div class="updates-box">
+
+        <div class="updates-content">
+
+            <div class="patch-label">
+                COMPATIBILITÀ THE SIMS 4
+            </div>
+
+            <h3>
+                Patch 1.128.90 • 22/09/2026
+            </h3>
+
+            <p>
+                Controlla quali mod e traduzioni presenti
+                su Aiznun sono compatibili con la patch attuale,
+                quali sono ancora in verifica e quali
+                necessitano di un aggiornamento.
+            </p>
+
+            <div class="status-preview">
+
+                <span class="status compatible">
+                    COMPATIBILE
+                </span>
+
+                <span class="status checking">
+                    IN VERIFICA
+                </span>
+
+                <span class="status update">
+                    DA AGGIORNARE
+                </span>
+
+                <span class="status translation">
+                    TRADUZIONI
+                </span>
+
+            </div>
+
+            <a class="button" href="aggiornamenti.html">
+                CONTROLLA COMPATIBILITÀ
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTATTI -->
+
+<section class="contact" id="contatti">
+
+    <h2 class="section-title">
+        Contatti
+    </h2>
+
+    <div class="section-decoration">
+        ♡ ✦ ♡
+    </div>
+
+    <p>
+        Hai bisogno di informazioni su una traduzione
+        o sul sito? Contatta AIZNUN.
+    </p>
+
+    <div class="email">
+        aiznun.contact@gmail.com
+    </div>
+
+    <a
+        class="button"
+        href="mailto:aiznun.contact@gmail.com?subject=Aiznun%20-%20Richiesta%20informazioni">
+        SCRIVIMI
+    </a>
+
+</section>
 
 </main>
 
