@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animazioni +18 | Aiznun</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#f7f1ff;
+    color:#30233d;
+}
+
+header{
+    background:linear-gradient(135deg,#76519f,#b99be8,#d8c4f2);
+    color:white;
+    text-align:center;
+    padding:65px 20px 55px;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before,
+header::after{
+    content:"❥";
+    position:absolute;
+    font-size:75px;
+    opacity:.15;
+}
+
+header::before{
+    left:10%;
+    top:15px;
+}
+
+header::after{
+    right:10%;
+    bottom:10px;
+}
+
+header h1{
+    font-size:52px;
+    letter-spacing:9px;
+    margin-bottom:14px;
+}
+
+header p{
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+nav{
+    background:white;
+    text-align:center;
+    padding:19px;
+    box-shadow:0 3px 15px rgba(70,45,90,.10);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:#68458b;
+    text-decoration:none;
+    margin:0 15px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#a27bc9;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:65px 20px;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.adult-icon{
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    background:#76519f;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 18px;
+    font-size:32px;
+    box-shadow:0 5px 15px rgba(118,81,159,.25);
+}
+
+.intro h2{
+    color:#68458b;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.decoration{
+    color:#a27bc9;
+    font-size:20px;
+    letter-spacing:7px;
+    margin-bottom:20px;
+}
+
+.intro p{
+    max-width:720px;
+    margin:auto;
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.8;
+}
+
+.warning{
+    background:linear-gradient(135deg,#f0e5fa,#ffffff);
+    border:1px solid #dcc8f0;
+    border-radius:24px;
+    padding:25px;
+    text-align:center;
+    max-width:850px;
+    margin:35px auto 50px;
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.7;
+}
+
+.warning strong{
+    color:#68458b;
+}
+
+.tools{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.search{
+    flex:1;
+    min-width:240px;
+    padding:14px 18px;
+    border:1px solid #dcc8f0;
+    border-radius:25px;
+    background:white;
+    color:#30233d;
+    font-size:14px;
+    outline:none;
+}
+
+.search:focus{
+    border-color:#8e6bbd;
+}
+
+.filter{
+    padding:14px 18px;
+    border:1px solid #dcc8f0;
+    border-radius:25px;
+    background:white;
+    color:#68458b;
+    font-weight:bold;
+    outline:none;
+}
+
+.table-container{
+    overflow-x:auto;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(91,61,120,.10);
+    border:1px solid #eadcf8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:850px;
+}
+
+th{
+    background:#76519f;
+    color:white;
+    padding:18px 15px;
+    text-align:left;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+td{
+    padding:18px 15px;
+    border-bottom:1px solid #eee5f8;
+    font-family:Arial,sans-serif;
+    color:#5f5369;
+    font-size:14px;
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+.status{
+    display:inline-block;
+    padding:7px 11px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.compatible{
+    background:#dff3e5;
+    color:#347348;
+}
+
+.checking{
+    background:#fff0c9;
+    color:#896a19;
+}
+
+.update{
+    background:#f8dde3;
+    color:#984354;
+}
+
+.download{
+    display:inline-block;
+    padding:9px 15px;
+    border-radius:20px;
+    background:#76519f;
+    color:white;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.download:hover{
+    background:#593878;
+}
+
+.empty{
+    padding:55px 25px !important;
+    text-align:center;
+    color:#766a80;
+    line-height:1.8;
+}
+
+.empty-symbol{
+    font-family:Georgia,"Times New Roman",serif;
+    color:#a27bc9;
+    font-size:32px;
+}
+
+.info{
+    margin-top:30px;
+    background:white;
+    border:1px solid #eadcf8;
+    border-radius:22px;
+    padding:25px;
+    font-family:Arial,sans-serif;
+    color:#665b70;
+    line-height:1.8;
+    font-size:13px;
+}
+
+.info strong{
+    color:#68458b;
+}
+
+.back{
+    text-align:center;
+    margin-top:45px;
+}
+
+.button{
+    display:inline-block;
+    padding:13px 25px;
+    background:#76519f;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#593878;
+}
+
+footer{
+    background:#30233d;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    line-height:1.8;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:38px;
+    }
+
+    .intro h2{
+        font-size:31px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px 8px;
+    }
+
+    .tools{
+        flex-direction:column;
+    }
+
+    .search,
+    .filter{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AIZNUN</h1>
+    <p>THE SIMS 4 • MOD • TRADUZIONI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="traduzioni.html">Traduzioni</a>
+    <a href="mod.html">Mod</a>
+    <a href="guide.html">Guide</a>
+    <a href="aggiornamenti.html">Aggiornamenti</a>
+    <a href="index.html#contatti">Contatti</a>
+</nav>
+
+<main class="container">
+
+<section class="intro">
+
+    <div class="adult-icon">❥</div>
+
+    <h2>Animazioni +18</h2>
+
+    <div class="decoration">✦ ❥ ✦</div>
+
+    <p>
+        Una raccolta organizzata di animazioni per WickedWhims,
+        pensata per trovare facilmente gli autori e raggiungere
+        le rispettive pagine di download.
+    </p>
+
+</section>
+
+<div class="warning">
+    <strong>Contenuti +18</strong><br>
+    Questa sezione è destinata esclusivamente a utenti maggiorenni.
+    Aiznun raccoglie e organizza i collegamenti alle animazioni
+    originali dei rispettivi creatori.
+</div>
+
+<div class="tools">
+
+    <input
+        type="text"
+        id="searchInput"
+        class="search"
+        placeholder="Cerca autore o animazione..."
+        onkeyup="filterTable()">
+
+    <select
+        id="statusFilter"
+        class="filter"
+        onchange="filterTable()">
+
+        <option value="all">
+            Tutti gli stati
+        </option>
+
+        <option value="compatibile">
+            Compatibile
+        </option>
+
+        <option value="verifica">
+            In verifica
+        </option>
+
+        <option value="aggiornare">
+            Da aggiornare
+        </option>
+
+    </select>
+
+</div>
+
+<div class="table-container">
+
+<table id="animationsTable">
+
+<thead>
+<tr>
+    <th>AUTORE</th>
+    <th>ANIMAZIONI</th>
+    <th>STATO</th>
+    <th>ULTIMO AGGIORNAMENTO</th>
+    <th>DOWNLOAD</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="empty-row">
+    <td colspan="5" class="empty">
+
+        <span class="empty-symbol">❥</span>
+
+        <br><br>
+
+        Le animazioni verranno aggiunte qui.<br>
+        Usa questa pagina per trovare rapidamente
+        i pacchetti dei vari creatori.
+
+    </td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="info">
+
+    <strong>Nota:</strong>
+    i contenuti appartengono ai rispettivi creatori.
+    Aiznun non rivendica la proprietà delle animazioni
+    e indirizza alle pagine originali per il download.
+
+</div>
+
+<div class="back">
+
+    <a class="button" href="mod.html#adult">
+        TORNA AI CONTENUTI +18
+    </a>
+
+</div>
+
+</main>
+
+<footer>
+    © 2026 AIZNUN — The Sims 4 Fan Site<br>
+    Non affiliato con Electronic Arts o Maxis.
+</footer>
+
+<script>
+
+function filterTable(){
+
+    const search =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const status =
+        document.getElementById("statusFilter")
+        .value
+        .toLowerCase();
+
+    const rows =
+        document.querySelectorAll(
+            "#animationsTable tbody tr:not(.empty-row)"
+        );
+
+    rows.forEach(row => {
+
+        const text =
+            row.innerText.toLowerCase();
+
+        const rowStatus =
+            row.dataset.status || "";
+
+        const matchesSearch =
+            text.includes(search);
+
+        const matchesStatus =
+            status === "all" ||
+            rowStatus === status;
+
+        if(matchesSearch && matchesStatus){
+            row.style.display = "";
+        }else{
+            row.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
