@@ -6,6 +6,8 @@
 
 <title>Aiznun | The Sims 4</title>
 
+<link rel="icon" type="image/png" href="logo-aiznun.png">
+
 <style>
 * { box-sizing: border-box; }
 
@@ -28,12 +30,26 @@ header {
     border-bottom: 1px solid #eadcff;
 }
 
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
 .logo {
     font-family: Georgia, serif;
     font-size: 44px;
     letter-spacing: 8px;
     color: #7447a8;
     margin: 0;
+}
+
+.aiznun-side-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 14px;
 }
 
 .tagline {
@@ -274,9 +290,19 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .brand-header {
+        gap: 12px;
+    }
+
     .logo {
         font-size: 34px;
         letter-spacing: 5px;
+    }
+
+    .aiznun-side-logo {
+        width: 46px;
+        height: 46px;
+        border-radius: 11px;
     }
 
     nav {
@@ -293,7 +319,14 @@ footer {
 <body>
 
 <header>
-    <h2 class="logo">AIZNUN</h2>
+    <div class="brand-header">
+        <img src="logo-aiznun.png" alt="Logo Aiznun" class="aiznun-side-logo">
+
+        <h2 class="logo">AIZNUN</h2>
+
+        <img src="logo-aiznun.png" alt="Logo Aiznun" class="aiznun-side-logo">
+    </div>
+
     <div class="tagline">THE SIMS 4 • MOD • TRADUZIONI</div>
 </header>
 
