@@ -14,51 +14,77 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, "Times New Roman", serif;
             background: #f7f1ff;
             color: #30233d;
         }
 
         header {
-            background: linear-gradient(135deg, #8e6bbd, #b99be8);
+            background: linear-gradient(135deg, #76519f, #b99be8, #d8c4f2);
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 65px 20px 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before,
+        header::after {
+            content: "✦";
+            position: absolute;
+            font-size: 70px;
+            opacity: 0.18;
+        }
+
+        header::before {
+            left: 10%;
+            top: 20px;
+        }
+
+        header::after {
+            right: 10%;
+            bottom: 15px;
         }
 
         header h1 {
-            font-size: 42px;
-            letter-spacing: 5px;
-            margin-bottom: 10px;
+            font-size: 52px;
+            letter-spacing: 9px;
+            margin-bottom: 14px;
         }
 
         header p {
-            font-size: 15px;
-            letter-spacing: 2px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
         }
 
         nav {
             background: white;
             text-align: center;
-            padding: 18px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 19px;
+            box-shadow: 0 3px 15px rgba(70, 45, 90, 0.10);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         nav a {
-            color: #6d4c91;
+            color: #68458b;
             text-decoration: none;
             margin: 0 15px;
+            font-family: Arial, sans-serif;
             font-weight: bold;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: #a47bd1;
+            color: #a27bc9;
         }
 
         .container {
             max-width: 1000px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 65px 20px;
         }
 
         .intro {
@@ -66,33 +92,65 @@
             margin-bottom: 45px;
         }
 
+        .crown {
+            font-size: 40px;
+            color: #8e6bbd;
+            margin-bottom: 12px;
+        }
+
         .intro h2 {
-            font-size: 34px;
-            color: #6d4c91;
-            margin-bottom: 15px;
+            font-size: 38px;
+            color: #68458b;
+            margin-bottom: 12px;
+        }
+
+        .decoration {
+            color: #a27bc9;
+            font-size: 20px;
+            letter-spacing: 7px;
+            margin-bottom: 20px;
         }
 
         .intro p {
             max-width: 700px;
             margin: auto;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #665b70;
+            font-family: Arial, sans-serif;
         }
 
         .translation-card {
             background: white;
-            border-radius: 22px;
-            padding: 35px;
-            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.12);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(91, 61, 120, 0.12);
             border: 1px solid #eadcf8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .translation-card::after {
+            content: "♕";
+            position: absolute;
+            right: -15px;
+            bottom: -55px;
+            font-size: 170px;
+            color: #f3eafb;
+            z-index: 0;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
         }
 
         .badge {
             display: inline-block;
             background: #eadcf8;
             color: #6d4c91;
-            padding: 7px 14px;
+            padding: 8px 15px;
             border-radius: 20px;
+            font-family: Arial, sans-serif;
             font-size: 12px;
             font-weight: bold;
             letter-spacing: 1px;
@@ -100,27 +158,30 @@
         }
 
         .translation-card h3 {
-            font-size: 29px;
+            font-size: 31px;
             color: #4d3567;
-            margin-bottom: 12px;
+            margin-bottom: 13px;
         }
 
         .description {
             color: #665b70;
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 25px;
+            font-family: Arial, sans-serif;
         }
 
         .info {
             background: #f8f3fc;
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 17px;
+            padding: 22px;
             margin-bottom: 25px;
+            font-family: Arial, sans-serif;
         }
 
         .info p {
             margin: 9px 0;
             color: #51465b;
+            word-break: break-word;
         }
 
         .info strong {
@@ -135,38 +196,43 @@
 
         .button {
             display: inline-block;
-            padding: 13px 22px;
-            border-radius: 25px;
+            padding: 14px 23px;
+            border-radius: 30px;
             text-decoration: none;
+            font-family: Arial, sans-serif;
             font-weight: bold;
             transition: 0.2s;
         }
 
         .original {
-            background: #6d4c91;
+            background: #76519f;
             color: white;
+            box-shadow: 0 5px 15px rgba(118, 81, 159, 0.20);
         }
 
         .original:hover {
-            background: #573875;
+            background: #593878;
+            transform: translateY(-2px);
         }
 
         .download {
             background: #eadcf8;
-            color: #6d4c91;
+            color: #68458b;
+            border: 1px solid #d8c4f2;
         }
 
-        .download.disabled {
-            opacity: 0.55;
-            cursor: not-allowed;
+        .download:hover {
+            background: #d8c4f2;
+            transform: translateY(-2px);
         }
 
         .credits {
-            margin-top: 25px;
+            margin-top: 27px;
             padding-top: 20px;
             border-top: 1px solid #eadcf8;
+            font-family: Arial, sans-serif;
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #75697e;
         }
 
@@ -174,23 +240,33 @@
             background: #30233d;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
             font-size: 13px;
+            line-height: 1.8;
+            margin-top: 30px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header h1 {
-                font-size: 32px;
+                font-size: 38px;
             }
 
             .translation-card {
-                padding: 25px;
+                padding: 27px;
             }
 
             nav a {
                 display: inline-block;
                 margin: 6px 8px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                text-align: center;
             }
         }
     </style>
@@ -200,14 +276,13 @@
 
 <header>
     <h1>AIZNUN</h1>
-    <p>THE SIMS 4 • MOD • TRADUZIONI • CC</p>
+    <p>THE SIMS 4 • MOD • TRADUZIONI</p>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
     <a href="index.html#mod">Mod</a>
-    <a href="index.html#cc">CC</a>
     <a href="index.html#guide">Guide</a>
     <a href="index.html#contatti">Contatti</a>
 </nav>
@@ -215,75 +290,89 @@
 <main class="container">
 
     <section class="intro">
+
+        <div class="crown">♕</div>
+
         <h2>Traduzioni</h2>
+
+        <div class="decoration">✦ ♡ ✦</div>
+
         <p>
             Qui trovi le traduzioni italiane delle mod di The Sims 4
             realizzate da AIZNUN.
             Ogni mod mantiene i crediti del proprio autore originale.
         </p>
+
     </section>
 
     <section class="translation-card">
 
-        <span class="badge">TRADUZIONE ITALIANA</span>
+        <div class="card-content">
 
-        <h3>Connected Sims</h3>
+            <span class="badge">TRADUZIONE ITALIANA</span>
 
-        <p class="description">
-            Traduzione italiana della mod Connected Sims di adeepindigo.
-            La mod aggiunge nuove possibilità sociali per i Sims,
-            permettendo loro di ricevere inviti e partecipare a diverse
-            attività ed eventi.
-        </p>
+            <h3>Connected Sims</h3>
 
-        <div class="info">
-
-            <p>
-                <strong>Mod originale:</strong>
-                Connected Sims
+            <p class="description">
+                Traduzione italiana della mod Connected Sims di adeepindigo.
+                La mod aggiunge nuove possibilità sociali per i Sims,
+                permettendo loro di ricevere inviti e partecipare a diverse
+                attività ed eventi.
             </p>
 
-            <p>
-                <strong>Autore:</strong>
-                adeepindigo
-            </p>
+            <div class="info">
 
-            <p>
-                <strong>Traduzione italiana:</strong>
-                AIZNUN
-            </p>
+                <p>
+                    <strong>Mod originale:</strong>
+                    Connected Sims
+                </p>
 
-            <p>
-                <strong>Lingua:</strong>
-                Italiano
-            </p>
+                <p>
+                    <strong>Autore:</strong>
+                    adeepindigo
+                </p>
 
-            <p>
-                <strong>File traduzione:</strong>
-                1_adeepindigo_smallmods_ConnectedSims_ITA_tradotto da AIZNUN.package
-            </p>
+                <p>
+                    <strong>Traduzione italiana:</strong>
+                    AIZNUN
+                </p>
 
-        </div>
+                <p>
+                    <strong>Lingua:</strong>
+                    Italiano
+                </p>
 
-        <div class="buttons">
+                <p>
+                    <strong>File traduzione:</strong>
+                    1_adeepindigo_smallmods_ConnectedSims_ITA_tradotto da AIZNUN.package
+                </p>
 
-            <a
-                class="button original"
-                href="https://adeepindigomods.itch.io/connected-sims"
-                target="_blank">
-                VISITA LA MOD ORIGINALE
-            </a>
+            </div>
 
-            <span class="button download disabled">
-                DOWNLOAD IN ARRIVO
-            </span>
+            <div class="buttons">
 
-        </div>
+                <a
+                    class="button original"
+                    href="https://adeepindigomods.itch.io/connected-sims"
+                    target="_blank">
+                    VISITA LA MOD ORIGINALE
+                </a>
 
-        <div class="credits">
-            La mod originale e tutti i relativi contenuti appartengono
-            al loro autore. Questa pagina presenta esclusivamente la
-            traduzione italiana realizzata da AIZNUN.
+                <a
+                    class="button download"
+                    href="1_adeepindigo_smallmods_ConnectedSims_ITA_tradotto%20da%20AIZNUN.package"
+                    download>
+                    SCARICA TRADUZIONE
+                </a>
+
+            </div>
+
+            <div class="credits">
+                La mod originale e tutti i relativi contenuti appartengono
+                al loro autore. Questa pagina presenta esclusivamente la
+                traduzione italiana realizzata da AIZNUN.
+            </div>
+
         </div>
 
     </section>
