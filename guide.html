@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Georgia, "Times New Roman", serif;
             background: #f7f1ff;
@@ -89,7 +93,7 @@
 
         .intro {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
         .crown {
@@ -99,7 +103,7 @@
         }
 
         .intro h2 {
-            font-size: 38px;
+            font-size: 40px;
             color: #68458b;
             margin-bottom: 12px;
         }
@@ -119,12 +123,63 @@
             font-family: Arial, sans-serif;
         }
 
+        .guide-menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 70px;
+        }
+
+        .guide-menu a {
+            background: white;
+            border: 1px solid #eadcf8;
+            border-radius: 20px;
+            padding: 25px 18px;
+            text-align: center;
+            text-decoration: none;
+            color: #4d3567;
+            box-shadow: 0 8px 25px rgba(91,61,120,0.08);
+            transition: 0.2s;
+        }
+
+        .guide-menu a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(91,61,120,0.14);
+        }
+
+        .menu-icon {
+            display: block;
+            color: #8e6bbd;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .guide-section {
+            scroll-margin-top: 100px;
+            margin-bottom: 90px;
+        }
+
+        .guide-title {
+            text-align: center;
+            font-size: 32px;
+            color: #68458b;
+            margin-bottom: 10px;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #766a80;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
         .guide-box {
             background: white;
             border: 1px solid #eadcf8;
             border-radius: 25px;
             padding: 38px;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             box-shadow: 0 8px 25px rgba(91,61,120,0.10);
             position: relative;
             overflow: hidden;
@@ -186,9 +241,9 @@
             z-index: 1;
         }
 
-        .back {
+        .button-area {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 45px;
         }
 
         .button {
@@ -223,13 +278,21 @@
                 font-size: 38px;
             }
 
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+
+            .guide-menu {
+                grid-template-columns: 1fr;
+            }
+
             .guide-box {
                 padding: 27px;
             }
 
-            nav a {
-                display: inline-block;
-                margin: 6px 8px;
+            .intro h2 {
+                font-size: 32px;
             }
         }
     </style>
@@ -247,104 +310,327 @@
     <a href="traduzioni.html">Traduzioni</a>
     <a href="index.html#mod">Mod</a>
     <a href="guide.html">Guide</a>
+    <a href="index.html#aggiornamenti">Aggiornamenti</a>
     <a href="index.html#contatti">Contatti</a>
 </nav>
 
 <main class="container">
 
     <section class="intro">
+
         <div class="crown">♕</div>
 
-        <h2>Come installare le mod</h2>
+        <h2>Guide The Sims 4</h2>
 
         <div class="decoration">✦ ♡ ✦</div>
 
         <p>
-            Una guida semplice per installare correttamente
-            mod e traduzioni in The Sims 4.
+            Tutto quello che ti serve per installare mod e traduzioni
+            e risolvere i problemi più comuni in The Sims 4.
         </p>
+
     </section>
 
-    <section class="guide-box">
-        <div class="number">1</div>
-        <h3>Scarica la mod</h3>
-        <p>
-            Scarica la mod dal sito ufficiale del suo creatore.
-            Se utilizzi una traduzione AIZNUN, scarica anche
-            il relativo file di traduzione.
-        </p>
-    </section>
+    <div class="guide-menu">
 
-    <section class="guide-box">
-        <div class="number">2</div>
-        <h3>Estrai il file se necessario</h3>
-        <p>
-            Se il download è in formato ZIP o RAR, estrai prima
-            il contenuto. I file delle mod possono essere,
-            ad esempio, in formato .package o .ts4script.
-        </p>
-    </section>
+        <a href="#installare-mod">
+            <span class="menu-icon">⌘</span>
+            <strong>Installare le mod</strong>
+        </a>
 
-    <section class="guide-box">
-        <div class="number">3</div>
-        <h3>Apri la cartella Mods</h3>
-        <p>
-            Su Windows, normalmente trovi la cartella delle mod qui:
-        </p>
+        <a href="#traduzioni">
+            <span class="menu-icon">✎</span>
+            <strong>Installare le traduzioni</strong>
+        </a>
 
-        <div class="path">
-            Documenti → Electronic Arts → The Sims 4 → Mods
-        </div>
-    </section>
+        <a href="#problemi">
+            <span class="menu-icon">✦</span>
+            <strong>Problemi con le mod</strong>
+        </a>
 
-    <section class="guide-box">
-        <div class="number">4</div>
-        <h3>Inserisci i file</h3>
-        <p>
-            Copia i file della mod nella cartella Mods.
-            Inserisci anche il file della traduzione seguendo
-            eventuali istruzioni specifiche indicate nella pagina
-            della traduzione.
-        </p>
-    </section>
+    </div>
 
-    <section class="guide-box">
-        <div class="number">5</div>
-        <h3>Attiva le mod nel gioco</h3>
-        <p>
-            Avvia The Sims 4 e apri:
+    <!-- INSTALLARE LE MOD -->
+
+    <section class="guide-section" id="installare-mod">
+
+        <h2 class="guide-title">Installare le mod</h2>
+
+        <p class="guide-subtitle">
+            Come installare correttamente mod e script mod
+            in The Sims 4.
         </p>
 
-        <div class="path">
-            Opzioni di gioco → Altro
-        </div>
+        <div class="guide-box">
+            <div class="number">1</div>
 
-        <p style="margin-top:15px;">
-            Assicurati che siano abilitate le opzioni per i
-            contenuti personalizzati e le mod. Se la mod utilizza
-            script, abilita anche le mod dello script.
-        </p>
-    </section>
-
-    <section class="guide-box important">
-        <div class="important-content">
-            <div class="number">✦</div>
-
-            <h3>Dopo un aggiornamento di The Sims 4</h3>
+            <h3>Scarica la mod</h3>
 
             <p>
-                Gli aggiornamenti del gioco possono disattivare
-                automaticamente le mod oppure rendere alcune mod
-                temporaneamente incompatibili. Controlla sempre
-                gli aggiornamenti del creatore prima di riattivarle.
+                Scarica sempre la mod dalla pagina ufficiale
+                del suo creatore e controlla eventuali istruzioni
+                specifiche fornite dall'autore.
             </p>
         </div>
+
+        <div class="guide-box">
+            <div class="number">2</div>
+
+            <h3>Estrai il file</h3>
+
+            <p>
+                Se il download è contenuto in un file ZIP o RAR,
+                estrailo prima di inserirlo nel gioco.
+                Normalmente troverai file .package e,
+                per alcune mod, file .ts4script.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">3</div>
+
+            <h3>Apri la cartella Mods</h3>
+
+            <p>
+                Su Windows, normalmente la cartella si trova qui:
+            </p>
+
+            <div class="path">
+                Documenti → Electronic Arts → The Sims 4 → Mods
+            </div>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">4</div>
+
+            <h3>Inserisci i file</h3>
+
+            <p>
+                Copia i file della mod nella cartella Mods.
+                Puoi organizzare i file .package in sottocartelle,
+                ma presta particolare attenzione alle istruzioni
+                del creatore per i file .ts4script.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">5</div>
+
+            <h3>Attiva le mod nel gioco</h3>
+
+            <p>
+                Avvia The Sims 4 e apri:
+            </p>
+
+            <div class="path">
+                Opzioni di gioco → Altro
+            </div>
+
+            <p style="margin-top:15px;">
+                Attiva <strong>Contenuto personalizzato e mod</strong>.
+                Se utilizzi mod con file .ts4script, attiva anche
+                <strong>Mod dello script consentite</strong>.
+                Dopo aver modificato queste opzioni, riavvia il gioco.
+            </p>
+        </div>
+
     </section>
 
-    <div class="back">
+    <!-- INSTALLARE LE TRADUZIONI -->
+
+    <section class="guide-section" id="traduzioni">
+
+        <h2 class="guide-title">Installare le traduzioni</h2>
+
+        <p class="guide-subtitle">
+            Come utilizzare correttamente una traduzione italiana
+            AIZNUN insieme alla mod originale.
+        </p>
+
+        <div class="guide-box">
+            <div class="number">1</div>
+
+            <h3>Installa prima la mod originale</h3>
+
+            <p>
+                La traduzione normalmente non sostituisce la mod.
+                Scarica e installa prima la mod originale dalla
+                pagina del suo creatore.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">2</div>
+
+            <h3>Scarica la traduzione</h3>
+
+            <p>
+                Vai nella sezione Traduzioni di AIZNUN e scarica
+                la traduzione corrispondente alla mod che hai installato.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">3</div>
+
+            <h3>Inserisci la traduzione</h3>
+
+            <p>
+                Inserisci il file della traduzione nella stessa
+                cartella della mod originale, salvo indicazioni
+                differenti presenti nella pagina della traduzione.
+            </p>
+
+            <div class="path">
+                Documenti → Electronic Arts → The Sims 4 → Mods
+            </div>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">4</div>
+
+            <h3>Non eliminare la mod originale</h3>
+
+            <p>
+                La traduzione contiene i testi italiani, ma la mod
+                originale è necessaria per il funzionamento delle
+                sue caratteristiche. Mantieni quindi entrambi i file.
+            </p>
+        </div>
+
+        <div class="guide-box important">
+
+            <div class="important-content">
+
+                <div class="number">✦</div>
+
+                <h3>Dopo un aggiornamento della mod</h3>
+
+                <p>
+                    Se il creatore aggiorna la mod originale,
+                    controlla anche la pagina AIZNUN della traduzione.
+                    Una nuova versione della mod può introdurre
+                    nuove stringhe o modificare quelle esistenti,
+                    rendendo necessario un aggiornamento della traduzione.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROBLEMI -->
+
+    <section class="guide-section" id="problemi">
+
+        <h2 class="guide-title">Problemi con le mod</h2>
+
+        <p class="guide-subtitle">
+            Alcuni controlli utili quando una mod non appare,
+            non funziona correttamente o presenta problemi.
+        </p>
+
+        <div class="guide-box">
+            <div class="number">1</div>
+
+            <h3>Controlla che le mod siano attive</h3>
+
+            <p>
+                Dopo alcuni aggiornamenti di The Sims 4,
+                le opzioni relative alle mod possono essere
+                disattivate automaticamente.
+            </p>
+
+            <div class="path">
+                Opzioni di gioco → Altro
+            </div>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">2</div>
+
+            <h3>Controlla la versione della mod</h3>
+
+            <p>
+                Verifica sul sito del creatore che la versione
+                installata sia adatta alla versione attuale
+                di The Sims 4.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">3</div>
+
+            <h3>Controlla le dipendenze</h3>
+
+            <p>
+                Alcune mod richiedono altre mod, librerie o file
+                aggiuntivi per funzionare. Controlla sempre
+                i requisiti indicati dal creatore.
+            </p>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">4</div>
+
+            <h3>Elimina la cache</h3>
+
+            <p>
+                Dopo aver aggiornato o rimosso una mod,
+                può essere utile chiudere il gioco ed eliminare
+                il file <strong>localthumbcache.package</strong>
+                dalla cartella principale di The Sims 4.
+                Il gioco lo ricreerà automaticamente al successivo avvio.
+            </p>
+
+            <div class="path">
+                Documenti → Electronic Arts → The Sims 4 → localthumbcache.package
+            </div>
+        </div>
+
+        <div class="guide-box">
+            <div class="number">5</div>
+
+            <h3>Prova senza la mod problematica</h3>
+
+            <p>
+                Se il problema continua, chiudi il gioco e sposta
+                temporaneamente la mod sospetta fuori dalla cartella Mods.
+                Avvia nuovamente il gioco per verificare se il problema
+                scompare.
+            </p>
+        </div>
+
+        <div class="guide-box important">
+
+            <div class="important-content">
+
+                <div class="number">♕</div>
+
+                <h3>Dopo una patch di The Sims 4</h3>
+
+                <p>
+                    Non dare per scontato che tutte le mod siano
+                    immediatamente compatibili con una nuova patch.
+                    Controlla la sezione Compatibilità di AIZNUN
+                    e soprattutto le comunicazioni ufficiali
+                    del creatore della mod prima di utilizzare
+                    una versione non ancora verificata.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="button-area">
+
         <a class="button" href="index.html">
             TORNA ALLA HOME
         </a>
+
     </div>
 
 </main>
