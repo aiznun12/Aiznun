@@ -66,7 +66,7 @@
             background: white;
             text-align: center;
             padding: 19px;
-            box-shadow: 0 3px 15px rgba(70, 45, 90, 0.10);
+            box-shadow: 0 3px 15px rgba(70,45,90,0.10);
             position: sticky;
             top: 0;
             z-index: 10;
@@ -92,7 +92,7 @@
             padding: 70px 30px;
             background: white;
             border-radius: 30px;
-            box-shadow: 0 12px 35px rgba(91, 61, 120, 0.12);
+            box-shadow: 0 12px 35px rgba(91,61,120,0.12);
             border: 1px solid #eadcf8;
             position: relative;
             overflow: hidden;
@@ -144,7 +144,7 @@
             font-family: Arial, sans-serif;
             font-weight: bold;
             transition: 0.2s;
-            box-shadow: 0 5px 15px rgba(118, 81, 159, 0.25);
+            box-shadow: 0 5px 15px rgba(118,81,159,0.25);
         }
 
         .button:hover {
@@ -183,7 +183,7 @@
             background: white;
             padding: 35px 25px;
             border-radius: 23px;
-            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.10);
+            box-shadow: 0 8px 25px rgba(91,61,120,0.10);
             border: 1px solid #eadcf8;
             text-align: center;
             transition: 0.25s;
@@ -197,7 +197,7 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 13px 30px rgba(91, 61, 120, 0.16);
+            box-shadow: 0 13px 30px rgba(91,61,120,0.16);
         }
 
         .card-icon {
@@ -219,24 +219,118 @@
             font-size: 14px;
         }
 
-        .updates {
-            background: linear-gradient(135deg, #ffffff, #f4ebfc);
+        /* COMPATIBILITÀ */
+
+        .patch-box {
+            background: linear-gradient(135deg, #ffffff, #f0e5fa);
+            border: 1px solid #dcc8f0;
             border-radius: 25px;
-            padding: 40px;
-            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.10);
-            border: 1px solid #eadcf8;
+            padding: 32px;
             text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(91,61,120,0.10);
         }
 
-        .updates-icon {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .updates p {
-            color: #665b70;
-            line-height: 1.8;
+        .patch-box .patch-label {
             font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #8e6bbd;
+            margin-bottom: 10px;
+        }
+
+        .patch-box h3 {
+            color: #4d3567;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .patch-box p {
+            font-family: Arial, sans-serif;
+            color: #665b70;
+            line-height: 1.7;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            border-radius: 23px;
+            border: 1px solid #eadcf8;
+            box-shadow: 0 8px 25px rgba(91,61,120,0.10);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+            font-family: Arial, sans-serif;
+        }
+
+        th {
+            background: #76519f;
+            color: white;
+            padding: 18px 15px;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #eee3f8;
+            color: #5f5369;
+            font-size: 14px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: #fbf8fe;
+        }
+
+        .mod-name {
+            font-weight: bold;
+            color: #68458b;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .compatible {
+            background: #e2f5e8;
+            color: #347348;
+        }
+
+        .checking {
+            background: #fff2cf;
+            color: #896a19;
+        }
+
+        .update {
+            background: #fbe1e6;
+            color: #984354;
+        }
+
+        .unknown {
+            background: #eee9f3;
+            color: #6f6478;
+        }
+
+        .legend {
+            text-align: center;
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+            color: #665b70;
+            font-size: 13px;
+            line-height: 2.2;
         }
 
         .contact {
@@ -289,6 +383,10 @@
                 display: inline-block;
                 margin: 6px 8px;
             }
+
+            .section-title {
+                font-size: 29px;
+            }
         }
     </style>
 </head>
@@ -304,7 +402,8 @@
     <a href="#home">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
     <a href="#mod">Mod</a>
-    <a href="guide.html">Guide</a>
+    <a href="#guide">Guide</a>
+    <a href="#aggiornamenti">Aggiornamenti</a>
     <a href="#contatti">Contatti</a>
 </nav>
 
@@ -380,26 +479,26 @@
                 <div class="card-icon">⌘</div>
                 <h3>Installare le mod</h3>
                 <p>
-                    Guide semplici per installare correttamente
-                    mod e traduzioni nel gioco.
+                    Scopri come installare correttamente
+                    file .package e .ts4script in The Sims 4.
                 </p>
             </a>
 
-            <a href="traduzioni.html" class="card">
+            <a href="guide.html#traduzioni" class="card">
                 <div class="card-icon">✎</div>
-                <h3>Traduzioni</h3>
+                <h3>Installare le traduzioni</h3>
                 <p>
-                    Informazioni utili sulle traduzioni italiane
-                    e sul loro utilizzo.
+                    Scopri come inserire una traduzione italiana
+                    insieme alla mod originale.
                 </p>
             </a>
 
-            <a href="#aggiornamenti" class="card">
+            <a href="guide.html#problemi" class="card">
                 <div class="card-icon">✦</div>
-                <h3>Aggiornamenti</h3>
+                <h3>Problemi con le mod</h3>
                 <p>
-                    Informazioni sugli aggiornamenti delle mod
-                    e delle relative traduzioni.
+                    Cosa controllare quando una mod non appare,
+                    non funziona o crea problemi dopo una patch.
                 </p>
             </a>
 
@@ -408,16 +507,74 @@
 
     <section id="aggiornamenti">
 
-        <h2 class="section-title">Ultimi aggiornamenti</h2>
+        <h2 class="section-title">Compatibilità Mod & Traduzioni</h2>
         <div class="section-decoration">✦ ♕ ✦</div>
 
-        <div class="updates">
-            <div class="updates-icon">✦</div>
+        <div class="patch-box">
+
+            <div class="patch-label">
+                PATCH THE SIMS 4
+            </div>
+
+            <h3>Patch 1.128.90 • 22/09/2026</h3>
 
             <p>
-                Qui verranno pubblicati gli ultimi aggiornamenti
-                delle mod e delle traduzioni disponibili su Aiznun.
+                Qui puoi controllare lo stato delle mod presenti su Aiznun
+                e delle relative traduzioni italiane.
+                Gli stati vengono aggiornati quando sono disponibili
+                nuove informazioni sulla compatibilità.
             </p>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>MOD</th>
+                        <th>AUTORE</th>
+                        <th>STATO MOD</th>
+                        <th>AGGIORNAMENTO MOD</th>
+                        <th>TRADUZIONE AIZNUN</th>
+                        <th>AGGIORNAMENTO TRADUZIONE</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="mod-name">Connected Sims</td>
+                        <td>adeepindigo</td>
+
+                        <td>
+                            <span class="status checking">
+                                IN VERIFICA
+                            </span>
+                        </td>
+
+                        <td>—</td>
+
+                        <td>
+                            <span class="status compatible">
+                                DISPONIBILE
+                            </span>
+                        </td>
+
+                        <td>2026</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="legend">
+            <strong>Compatibile</strong> = compatibilità confermata •
+            <strong>In verifica</strong> = controllo in corso •
+            <strong>Da aggiornare</strong> = è necessario un aggiornamento
         </div>
 
     </section>
