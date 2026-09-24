@@ -105,18 +105,17 @@
             color: #f0e5fa;
             right: -20px;
             bottom: -55px;
-            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .crown {
             font-size: 40px;
             color: #8e6bbd;
             margin-bottom: 15px;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
 
         .hero h2 {
@@ -250,6 +249,13 @@
             font-family: Arial, sans-serif;
         }
 
+        .email {
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+            color: #68458b;
+            font-weight: bold;
+        }
+
         footer {
             background: #30233d;
             color: white;
@@ -305,7 +311,6 @@
 <main>
 
     <section class="hero" id="home">
-
         <div class="hero-content">
 
             <div class="crown">♕</div>
@@ -324,13 +329,11 @@
             </a>
 
         </div>
-
     </section>
 
     <section id="mod">
 
         <h2 class="section-title">Mod</h2>
-
         <div class="section-decoration">✦ ♕ ✦</div>
 
         <div class="cards">
@@ -364,13 +367,11 @@
             </div>
 
         </div>
-
     </section>
 
     <section id="guide">
 
         <h2 class="section-title">Guide</h2>
-
         <div class="section-decoration">✦ ♡ ✦</div>
 
         <div class="cards">
@@ -403,24 +404,20 @@
             </a>
 
         </div>
-
     </section>
 
     <section id="aggiornamenti">
 
         <h2 class="section-title">Ultimi aggiornamenti</h2>
-
         <div class="section-decoration">✦ ♕ ✦</div>
 
         <div class="updates">
-
             <div class="updates-icon">✦</div>
 
             <p>
                 Qui verranno pubblicati gli ultimi aggiornamenti
                 delle mod e delle traduzioni disponibili su Aiznun.
             </p>
-
         </div>
 
     </section>
@@ -428,15 +425,20 @@
     <section class="contact" id="contatti">
 
         <h2 class="section-title">Contatti</h2>
-
         <div class="section-decoration">♡ ✦ ♡</div>
 
         <p>
-            Per informazioni sulle traduzioni o sul sito,
-            puoi contattare AIZNUN.
+            Hai bisogno di informazioni su una traduzione o sul sito?
+            Contatta AIZNUN.
         </p>
 
-        <a class="button" href="#">
+        <div class="email">
+            aiznun.contact@gmail.com
+        </div>
+
+        <a
+            class="button"
+            href="mailto:aiznun.contact@gmail.com?subject=Aiznun%20-%20Richiesta%20informazioni">
             SCRIVIMI
         </a>
 
