@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guide | Aiznun</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f1ff;
+            color: #30233d;
+        }
+
+        header {
+            background: linear-gradient(135deg, #76519f, #b99be8, #d8c4f2);
+            color: white;
+            text-align: center;
+            padding: 65px 20px 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before,
+        header::after {
+            content: "✦";
+            position: absolute;
+            font-size: 70px;
+            opacity: 0.18;
+        }
+
+        header::before {
+            left: 10%;
+            top: 20px;
+        }
+
+        header::after {
+            right: 10%;
+            bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 52px;
+            letter-spacing: 9px;
+            margin-bottom: 14px;
+        }
+
+        header p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            background: white;
+            text-align: center;
+            padding: 19px;
+            box-shadow: 0 3px 15px rgba(70,45,90,0.10);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #68458b;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a27bc9;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 65px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .crown {
+            font-size: 42px;
+            color: #8e6bbd;
+            margin-bottom: 12px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+            color: #68458b;
+            margin-bottom: 12px;
+        }
+
+        .decoration {
+            color: #a27bc9;
+            font-size: 20px;
+            letter-spacing: 7px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #665b70;
+            font-family: Arial, sans-serif;
+        }
+
+        .guide-box {
+            background: white;
+            border: 1px solid #eadcf8;
+            border-radius: 25px;
+            padding: 38px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(91,61,120,0.10);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: #eadcf8;
+            color: #68458b;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 17px;
+        }
+
+        .guide-box h3 {
+            color: #4d3567;
+            font-size: 23px;
+            margin-bottom: 13px;
+        }
+
+        .guide-box p {
+            font-family: Arial, sans-serif;
+            color: #665b70;
+            line-height: 1.8;
+        }
+
+        .path {
+            background: #f8f3fc;
+            border-radius: 13px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+            color: #68458b;
+            word-break: break-word;
+        }
+
+        .important {
+            background: linear-gradient(135deg, #ffffff, #f0e5fa);
+            border: 1px solid #dcc8f0;
+        }
+
+        .important::after {
+            content: "♕";
+            position: absolute;
+            right: -10px;
+            bottom: -45px;
+            font-size: 140px;
+            color: #eadcf8;
+            opacity: 0.6;
+        }
+
+        .important-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 30px;
+            background: #76519f;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(118,81,159,0.25);
+        }
+
+        .button:hover {
+            background: #593878;
+        }
+
+        footer {
+            background: #30233d;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 38px;
+            }
+
+            .guide-box {
+                padding: 27px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>AIZNUN</h1>
+    <p>THE SIMS 4 • MOD • TRADUZIONI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="traduzioni.html">Traduzioni</a>
+    <a href="index.html#mod">Mod</a>
+    <a href="guide.html">Guide</a>
+    <a href="index.html#contatti">Contatti</a>
+</nav>
+
+<main class="container">
+
+    <section class="intro">
+        <div class="crown">♕</div>
+
+        <h2>Come installare le mod</h2>
+
+        <div class="decoration">✦ ♡ ✦</div>
+
+        <p>
+            Una guida semplice per installare correttamente
+            mod e traduzioni in The Sims 4.
+        </p>
+    </section>
+
+    <section class="guide-box">
+        <div class="number">1</div>
+        <h3>Scarica la mod</h3>
+        <p>
+            Scarica la mod dal sito ufficiale del suo creatore.
+            Se utilizzi una traduzione AIZNUN, scarica anche
+            il relativo file di traduzione.
+        </p>
+    </section>
+
+    <section class="guide-box">
+        <div class="number">2</div>
+        <h3>Estrai il file se necessario</h3>
+        <p>
+            Se il download è in formato ZIP o RAR, estrai prima
+            il contenuto. I file delle mod possono essere,
+            ad esempio, in formato .package o .ts4script.
+        </p>
+    </section>
+
+    <section class="guide-box">
+        <div class="number">3</div>
+        <h3>Apri la cartella Mods</h3>
+        <p>
+            Su Windows, normalmente trovi la cartella delle mod qui:
+        </p>
+
+        <div class="path">
+            Documenti → Electronic Arts → The Sims 4 → Mods
+        </div>
+    </section>
+
+    <section class="guide-box">
+        <div class="number">4</div>
+        <h3>Inserisci i file</h3>
+        <p>
+            Copia i file della mod nella cartella Mods.
+            Inserisci anche il file della traduzione seguendo
+            eventuali istruzioni specifiche indicate nella pagina
+            della traduzione.
+        </p>
+    </section>
+
+    <section class="guide-box">
+        <div class="number">5</div>
+        <h3>Attiva le mod nel gioco</h3>
+        <p>
+            Avvia The Sims 4 e apri:
+        </p>
+
+        <div class="path">
+            Opzioni di gioco → Altro
+        </div>
+
+        <p style="margin-top:15px;">
+            Assicurati che siano abilitate le opzioni per i
+            contenuti personalizzati e le mod. Se la mod utilizza
+            script, abilita anche le mod dello script.
+        </p>
+    </section>
+
+    <section class="guide-box important">
+        <div class="important-content">
+            <div class="number">✦</div>
+
+            <h3>Dopo un aggiornamento di The Sims 4</h3>
+
+            <p>
+                Gli aggiornamenti del gioco possono disattivare
+                automaticamente le mod oppure rendere alcune mod
+                temporaneamente incompatibili. Controlla sempre
+                gli aggiornamenti del creatore prima di riattivarle.
+            </p>
+        </div>
+    </section>
+
+    <div class="back">
+        <a class="button" href="index.html">
+            TORNA ALLA HOME
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 AIZNUN — The Sims 4 Fan Site<br>
+    Non affiliato con Electronic Arts o Maxis.
+</footer>
+
+</body>
+</html>
