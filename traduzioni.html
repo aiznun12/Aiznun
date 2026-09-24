@@ -1,360 +1,298 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Traduzioni | Aiznun</title>
+    <title>Traduzioni | Aiznun</title>
 
-<style>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f1ff;
+            color: #30233d;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #faf7ff;
-    color: #33243f;
-}
+        header {
+            background: linear-gradient(135deg, #8e6bbd, #b99be8);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
 
-/* HEADER */
+        header h1 {
+            font-size: 42px;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
 
-header {
-    background: linear-gradient(135deg, #cda9f5, #8f5fc4);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
+        header p {
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
 
-.logo {
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 7px;
-}
+        nav {
+            background: white;
+            text-align: center;
+            padding: 18px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
 
-header p {
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
+        nav a {
+            color: #6d4c91;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-/* NAV */
+        nav a:hover {
+            color: #a47bd1;
+        }
 
-nav {
-    background: white;
-    box-shadow: 0 3px 15px rgba(90,50,120,0.12);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
 
-nav a {
-    color: #603b7d;
-    text-decoration: none;
-    padding: 17px 22px;
-    font-weight: bold;
-}
+        .intro {
+            text-align: center;
+            margin-bottom: 45px;
+        }
 
-nav a:hover {
-    background: #eee1ff;
-}
+        .intro h2 {
+            font-size: 34px;
+            color: #6d4c91;
+            margin-bottom: 15px;
+        }
 
-/* MAIN */
+        .intro p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            color: #665b70;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 55px auto;
-    padding: 0 25px;
-}
+        .translation-card {
+            background: white;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(91, 61, 120, 0.12);
+            border: 1px solid #eadcf8;
+        }
 
-.title {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #633c80;
-    font-size: 38px;
-}
+        .badge {
+            display: inline-block;
+            background: #eadcf8;
+            color: #6d4c91;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
 
-.intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 45px;
-    color: #665d6c;
-    line-height: 1.8;
-}
+        .translation-card h3 {
+            font-size: 29px;
+            color: #4d3567;
+            margin-bottom: 12px;
+        }
 
-/* SEARCH */
+        .description {
+            color: #665b70;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
 
-.search {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 40px;
-    padding: 16px 20px;
-    border: 2px solid #dcc5f2;
-    border-radius: 30px;
-    font-size: 16px;
-    outline: none;
-}
+        .info {
+            background: #f8f3fc;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
 
-.search:focus {
-    border-color: #9b68c8;
-}
+        .info p {
+            margin: 9px 0;
+            color: #51465b;
+        }
 
-/* CARDS */
+        .info strong {
+            color: #6d4c91;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-.card {
-    background: white;
-    border-radius: 22px;
-    padding: 28px;
-    box-shadow: 0 8px 25px rgba(80,50,100,0.10);
-    border: 1px solid #eee3f8;
-    transition: 0.3s;
-}
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(90,50,120,0.18);
-}
+        .original {
+            background: #6d4c91;
+            color: white;
+        }
 
-.tag {
-    display: inline-block;
-    background: #e4d1f7;
-    color: #633c80;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+        .original:hover {
+            background: #573875;
+        }
 
-.card h2 {
-    color: #633c80;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
+        .download {
+            background: #eadcf8;
+            color: #6d4c91;
+        }
 
-.card p {
-    color: #665d6c;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
+        .download.disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
 
-.button {
-    display: inline-block;
-    background: #7b4aa5;
-    color: white;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-}
+        .credits {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eadcf8;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #75697e;
+        }
 
-.button:hover {
-    background: #603680;
-}
+        footer {
+            background: #30233d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
 
-/* EMPTY INFO */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
 
-.info {
-    margin-top: 50px;
-    background: #f0e6fa;
-    border-radius: 25px;
-    padding: 35px;
-    text-align: center;
-}
+            .translation-card {
+                padding: 25px;
+            }
 
-.info h2 {
-    color: #633c80;
-    margin-bottom: 12px;
-}
-
-.info p {
-    color: #665d6c;
-}
-
-/* FOOTER */
-
-footer {
-    margin-top: 80px;
-    padding: 35px 20px;
-    background: #33243f;
-    color: #ddd;
-    text-align: center;
-}
-
-footer strong {
-    color: #cba4ef;
-}
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .logo {
-        font-size: 38px;
-    }
-
-}
-
-</style>
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-
-    <div class="logo">AIZNUN</div>
-
-    <p>
-        Traduzioni italiane per The Sims 4
-    </p>
-
+    <h1>AIZNUN</h1>
+    <p>THE SIMS 4 • MOD • TRADUZIONI • CC</p>
 </header>
 
-
 <nav>
-
     <a href="index.html">Home</a>
     <a href="traduzioni.html">Traduzioni</a>
-    <a href="#">Mod</a>
-    <a href="#">CC</a>
-    <a href="#">Guide</a>
-    <a href="#">Contatti</a>
-
+    <a href="index.html#mod">Mod</a>
+    <a href="index.html#cc">CC</a>
+    <a href="index.html#guide">Guide</a>
+    <a href="index.html#contatti">Contatti</a>
 </nav>
-
 
 <main class="container">
 
-    <h1 class="title">
-        Traduzioni
-    </h1>
-
-    <p class="intro">
-        Qui troverai le traduzioni italiane delle mod di The Sims 4
-        realizzate da Aiznun.
-        La pagina verrà aggiornata con nuove traduzioni e aggiornamenti.
-    </p>
-
-
-    <input
-        class="search"
-        type="text"
-        placeholder="Cerca una traduzione..."
-    >
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <span class="tag">
-                NUOVA
-            </span>
-
-            <h2>
-                Nome della Mod
-            </h2>
-
-            <p>
-                Traduzione italiana della mod.
-                Qui potremo inserire una breve descrizione
-                della mod e della traduzione.
-            </p>
-
-            <a href="#" class="button">
-                Scopri
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <span class="tag">
-                TRADUZIONE
-            </span>
-
-            <h2>
-                Nome della Mod
-            </h2>
-
-            <p>
-                Traduzione italiana disponibile per The Sims 4.
-            </p>
-
-            <a href="#" class="button">
-                Scopri
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <span class="tag">
-                AGGIORNATA
-            </span>
-
-            <h2>
-                Nome della Mod
-            </h2>
-
-            <p>
-                Traduzione aggiornata all'ultima versione della mod.
-            </p>
-
-            <a href="#" class="button">
-                Scopri
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="info">
-
-        <h2>
-            Nuove traduzioni in arrivo
-        </h2>
-
+    <section class="intro">
+        <h2>Traduzioni</h2>
         <p>
-            Sto lavorando a nuove traduzioni per rendere
-            sempre più mod disponibili in italiano.
+            Qui trovi le traduzioni italiane delle mod di The Sims 4
+            realizzate da AIZNUN.
+            Ogni mod mantiene i crediti del proprio autore originale.
+        </p>
+    </section>
+
+    <section class="translation-card">
+
+        <span class="badge">TRADUZIONE ITALIANA</span>
+
+        <h3>Connected Sims</h3>
+
+        <p class="description">
+            Traduzione italiana della mod Connected Sims di adeepindigo.
+            La mod aggiunge nuove possibilità sociali per i Sims,
+            permettendo loro di ricevere inviti e partecipare a diverse
+            attività ed eventi.
         </p>
 
-    </div>
+        <div class="info">
+
+            <p>
+                <strong>Mod originale:</strong>
+                Connected Sims
+            </p>
+
+            <p>
+                <strong>Autore:</strong>
+                adeepindigo
+            </p>
+
+            <p>
+                <strong>Traduzione italiana:</strong>
+                AIZNUN
+            </p>
+
+            <p>
+                <strong>Lingua:</strong>
+                Italiano
+            </p>
+
+            <p>
+                <strong>File traduzione:</strong>
+                1_adeepindigo_smallmods_ConnectedSims_ITA_tradotto da AIZNUN.package
+            </p>
+
+        </div>
+
+        <div class="buttons">
+
+            <a
+                class="button original"
+                href="https://adeepindigomods.itch.io/connected-sims"
+                target="_blank">
+                VISITA LA MOD ORIGINALE
+            </a>
+
+            <span class="button download disabled">
+                DOWNLOAD IN ARRIVO
+            </span>
+
+        </div>
+
+        <div class="credits">
+            La mod originale e tutti i relativi contenuti appartengono
+            al loro autore. Questa pagina presenta esclusivamente la
+            traduzione italiana realizzata da AIZNUN.
+        </div>
+
+    </section>
 
 </main>
 
-
 <footer>
-
-    <p>
-        © 2026 <strong>Aiznun</strong> — Fan site dedicato a The Sims 4
-    </p>
-
-    <p>
-        Non affiliato con Electronic Arts o Maxis.
-    </p>
-
+    © 2026 AIZNUN — The Sims 4 Fan Site<br>
+    Non affiliato con Electronic Arts o Maxis.
 </footer>
 
 </body>
