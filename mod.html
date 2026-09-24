@@ -195,14 +195,6 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-.mod-top{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    align-items:flex-start;
-    flex-wrap:wrap;
-}
-
 .mod-card h3{
     color:#4d3567;
     font-size:26px;
@@ -309,6 +301,7 @@ nav a:hover{
     margin-top:50px;
     position:relative;
     overflow:hidden;
+    scroll-margin-top:100px;
 }
 
 .adult-area::after{
@@ -344,7 +337,7 @@ nav a:hover{
     line-height:1.8;
 }
 
-.adult-icon{
+.adult-main-icon{
     width:64px;
     height:64px;
     margin:0 auto 15px;
@@ -362,7 +355,7 @@ nav a:hover{
 
 .adult-cards{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
@@ -371,7 +364,7 @@ nav a:hover{
     background:white;
     border:1px solid #eadcf8;
     border-radius:23px;
-    padding:32px 25px;
+    padding:32px 22px;
     text-align:center;
     text-decoration:none;
     color:inherit;
@@ -396,10 +389,29 @@ nav a:hover{
     font-size:14px;
 }
 
-.small-icon{
-    font-size:30px;
+.adult-card-icon{
+    font-size:34px;
     color:#8e6bbd;
-    margin-bottom:12px;
+    margin-bottom:14px;
+    min-height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.icon-18{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#eee5f8;
+    color:#76519f;
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    font-weight:bold;
+    margin:0 auto 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .back{
@@ -418,6 +430,17 @@ footer{
     margin-top:30px;
 }
 
+@media(max-width:800px){
+
+    .category-menu{
+        grid-template-columns:1fr;
+    }
+
+    .adult-cards{
+        grid-template-columns:1fr;
+    }
+}
+
 @media(max-width:700px){
 
     header h1{
@@ -427,14 +450,6 @@ footer{
     nav a{
         display:inline-block;
         margin:6px 8px;
-    }
-
-    .category-menu{
-        grid-template-columns:1fr;
-    }
-
-    .adult-cards{
-        grid-template-columns:1fr;
     }
 
     .intro h2{
@@ -480,6 +495,8 @@ footer{
     </p>
 
 </section>
+
+<!-- CATEGORIE NORMALI -->
 
 <div class="category-menu">
 
@@ -537,19 +554,16 @@ footer{
 
     <article class="mod-card">
 
-        <div class="mod-top">
+        <h3>Connected Sims</h3>
 
-            <div>
-                <h3>Connected Sims</h3>
-                <div class="author">di adeepindigo</div>
-            </div>
-
+        <div class="author">
+            di adeepindigo
         </div>
 
         <p class="mod-description">
-            Mod dedicata alla vita sociale e alle connessioni
-            dei Sims. Su Aiznun è disponibile anche
-            la traduzione italiana.
+            Connected Sims di adeepindigo è disponibile
+            nella raccolta Aiznun insieme alla sua
+            traduzione italiana.
         </p>
 
         <div class="tags">
@@ -600,11 +614,13 @@ footer{
 
 <section class="section" id="fantasy">
 
-    <h2 class="section-title">Fantasy</h2>
+    <h2 class="section-title">
+        Fantasy
+    </h2>
 
     <p class="section-subtitle">
-        Mod dedicate alla magia, ai regni e alle
-        atmosfere fantasy.
+        Mod dedicate alla magia, ai regni
+        e alle atmosfere fantasy.
     </p>
 
     <div class="empty">
@@ -619,11 +635,13 @@ footer{
 
 <section class="section" id="romance">
 
-    <h2 class="section-title">Romance</h2>
+    <h2 class="section-title">
+        Romance
+    </h2>
 
     <p class="section-subtitle">
-        Mod dedicate alle relazioni e alle
-        interazioni romantiche.
+        Mod dedicate alle relazioni
+        e alle interazioni romantiche.
     </p>
 
     <div class="empty">
@@ -640,7 +658,7 @@ footer{
 
     <div class="adult-content">
 
-        <div class="adult-icon">
+        <div class="adult-main-icon">
             18+
         </div>
 
@@ -649,16 +667,19 @@ footer{
         </h2>
 
         <p class="adult-warning">
-            Sezione dedicata alle mod per adulti e alle relative
-            traduzioni. I contenuti presenti in questa categoria
-            sono destinati esclusivamente a utenti maggiorenni.
+            Area dedicata ai contenuti per adulti.
+            Mod, traduzioni e animazioni sono organizzate
+            separatamente per rendere più semplice
+            trovare ciò che cerchi.
         </p>
 
         <div class="adult-cards">
 
+            <!-- MOD +18 -->
+
             <a class="adult-card" href="#mod18">
 
-                <div class="adult-icon">
+                <div class="icon-18">
                     18+
                 </div>
 
@@ -671,15 +692,37 @@ footer{
 
             </a>
 
+            <!-- TRADUZIONI +18 -->
+
             <a class="adult-card" href="#traduzioni18">
 
-                <div class="small-icon">✎</div>
+                <div class="adult-card-icon">
+                    ✎
+                </div>
 
                 <h3>Traduzioni +18</h3>
 
                 <p>
-                    Traduzioni italiane dedicate esclusivamente
-                    alle mod della sezione per adulti.
+                    Traduzioni italiane realizzate
+                    per le mod destinate a un pubblico adulto.
+                </p>
+
+            </a>
+
+            <!-- ANIMAZIONI +18 -->
+
+            <a class="adult-card" href="animazioni18.html">
+
+                <div class="adult-card-icon">
+                    ❥
+                </div>
+
+                <h3>Animazioni +18</h3>
+
+                <p>
+                    Raccolta organizzata di animazioni
+                    per WickedWhims con collegamenti
+                    ai rispettivi creatori.
                 </p>
 
             </a>
@@ -690,6 +733,8 @@ footer{
 
 </section>
 
+<!-- MOD +18 -->
+
 <section class="section" id="mod18">
 
     <h2 class="section-title">
@@ -697,7 +742,8 @@ footer{
     </h2>
 
     <p class="section-subtitle">
-        Mod destinate esclusivamente a utenti maggiorenni.
+        Mod destinate esclusivamente
+        a utenti maggiorenni.
     </p>
 
     <div class="empty">
@@ -708,6 +754,8 @@ footer{
 
 </section>
 
+<!-- TRADUZIONI +18 -->
+
 <section class="section" id="traduzioni18">
 
     <h2 class="section-title">
@@ -715,8 +763,8 @@ footer{
     </h2>
 
     <p class="section-subtitle">
-        Traduzioni italiane delle mod destinate
-        a utenti maggiorenni.
+        Traduzioni italiane delle mod
+        destinate a utenti maggiorenni.
     </p>
 
     <div class="empty">
