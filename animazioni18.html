@@ -19,8 +19,8 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(226, 196, 255, 0.45), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(187, 137, 255, 0.25), transparent 30%),
+        radial-gradient(circle at top left, rgba(226,196,255,.45), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(187,137,255,.25), transparent 30%),
         linear-gradient(135deg, #fbf7ff, #f3e9ff);
     color: #3e3150;
     min-height: 100vh;
@@ -29,7 +29,7 @@ body {
 header {
     text-align: center;
     padding: 38px 20px 25px;
-    background: rgba(255,255,255,0.72);
+    background: rgba(255,255,255,.72);
     border-bottom: 1px solid #eadcff;
 }
 
@@ -57,7 +57,7 @@ nav {
     flex-wrap: wrap;
     gap: 25px;
     padding: 16px 20px;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid #eadcff;
 }
@@ -75,28 +75,27 @@ nav a:hover {
 }
 
 .container {
-    width: min(1180px, 92%);
+    width: min(1150px, 92%);
     margin: auto;
     padding: 65px 0;
 }
 
 .hero {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .symbol {
     font-family: Georgia, serif;
-    font-size: 55px;
+    font-size: 58px;
     color: #9b68ca;
-    margin-bottom: 10px;
 }
 
 h1 {
     font-family: Georgia, serif;
-    font-size: clamp(36px, 6vw, 62px);
+    font-size: clamp(40px, 6vw, 62px);
     color: #593676;
-    margin: 0 0 15px;
+    margin: 8px 0 15px;
 }
 
 .subtitle {
@@ -107,15 +106,15 @@ h1 {
 }
 
 .warning {
-    margin: 35px auto;
     max-width: 900px;
+    margin: 35px auto;
     padding: 22px 25px;
-    background: rgba(255,255,255,0.78);
+    background: rgba(255,255,255,.78);
     border: 1px solid #e3d1f6;
     border-radius: 22px;
     text-align: center;
     line-height: 1.7;
-    box-shadow: 0 12px 35px rgba(101, 65, 132, 0.08);
+    box-shadow: 0 12px 35px rgba(101,65,132,.08);
 }
 
 .warning strong {
@@ -135,7 +134,7 @@ h1 {
     padding: 15px 18px;
     border-radius: 15px;
     border: 1px solid #dcc8ef;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,.92);
     color: #4f3a61;
     font-size: 14px;
     outline: none;
@@ -144,41 +143,41 @@ h1 {
 .controls input:focus,
 .controls select:focus {
     border-color: #a875d2;
-    box-shadow: 0 0 0 3px rgba(168,117,210,0.12);
+    box-shadow: 0 0 0 3px rgba(168,117,210,.12);
 }
 
 .table-wrap {
     overflow-x: auto;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,.82);
     border: 1px solid #e5d5f4;
     border-radius: 24px;
-    box-shadow: 0 15px 45px rgba(83, 53, 108, 0.09);
+    box-shadow: 0 15px 45px rgba(83,53,108,.09);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 930px;
+    min-width: 850px;
 }
 
 th {
     padding: 18px 16px;
     text-align: left;
-    background: linear-gradient(135deg, #7d4caf, #a16bd1);
+    background: linear-gradient(135deg,#7d4caf,#a16bd1);
     color: white;
     font-size: 12px;
     letter-spacing: 1px;
 }
 
 td {
-    padding: 18px 16px;
+    padding: 20px 16px;
     border-bottom: 1px solid #eee3f7;
     vertical-align: middle;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 tbody tr {
-    transition: 0.2s ease;
+    transition: .2s ease;
 }
 
 tbody tr:hover {
@@ -196,7 +195,7 @@ tbody tr:last-child td {
     color: #674184;
 }
 
-.packages {
+.package {
     color: #766483;
     font-size: 13px;
 }
@@ -205,49 +204,31 @@ tbody tr:last-child td {
     display: inline-block;
     padding: 7px 11px;
     border-radius: 999px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: .7px;
-    white-space: nowrap;
-}
-
-.verify {
-    background: #f3e7ff;
-    color: #7447a8;
-}
-
-.available {
     background: #e8f7ee;
     color: #34714c;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: .6px;
+    white-space: nowrap;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #8150b1, #a46ed2);
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg,#8050af,#a36dd0);
     color: white;
     text-decoration: none;
     font-size: 11px;
     font-weight: bold;
-    letter-spacing: .6px;
-    transition: transform .2s ease, box-shadow .2s ease;
+    letter-spacing: .7px;
+    white-space: nowrap;
+    transition: .2s ease;
 }
 
 .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 7px 18px rgba(115,72,150,.22);
-}
-
-.disabled {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background: #eee7f3;
-    color: #8c7a99;
-    font-size: 11px;
-    font-weight: bold;
-    white-space: nowrap;
 }
 
 .note {
@@ -270,7 +251,7 @@ tbody tr:last-child td {
     display: inline-block;
     padding: 13px 22px;
     border-radius: 999px;
-    background: #fff;
+    background: white;
     border: 1px solid #dac4ec;
     color: #704594;
     text-decoration: none;
@@ -300,10 +281,6 @@ footer {
     nav {
         gap: 14px;
     }
-
-    .container {
-        padding-top: 45px;
-    }
 }
 </style>
 </head>
@@ -326,247 +303,276 @@ footer {
 
 <main class="container">
 
-    <section class="hero">
-        <div class="symbol">❥</div>
-        <h1>Animazioni +18</h1>
-        <p class="subtitle">
-            Una raccolta organizzata di animazioni per WickedWhims.
-            Cerca il creator che ti interessa e raggiungi la pagina originale
-            per controllare aggiornamenti e download.
-        </p>
-    </section>
+<section class="hero">
+    <div class="symbol">❥</div>
 
-    <div class="warning">
-        <strong>Contenuti +18.</strong>
-        Questa sezione è destinata esclusivamente a utenti maggiorenni.
-        Aiznun organizza i collegamenti ai contenuti dei rispettivi creator
-        e non ne rivendica la proprietà.
-    </div>
+    <h1>Animazioni +18</h1>
 
-    <div class="controls">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cerca autore o pacchetto..."
-            onkeyup="filterTable()"
-        >
+    <p class="subtitle">
+        Raccolta di creator di animazioni per WickedWhims.
+        Cerca il creator che ti interessa e utilizza il pulsante
+        per raggiungere direttamente la sua pagina originale.
+    </p>
+</section>
 
-        <select id="statusFilter" onchange="filterTable()">
-            <option value="all">Tutti gli stati</option>
-            <option value="disponibile">Pagina disponibile</option>
-            <option value="verifica">Link in verifica</option>
-        </select>
-    </div>
+<div class="warning">
+    <strong>Contenuti +18.</strong>
+    Questa sezione è destinata esclusivamente a utenti maggiorenni.
+    Aiznun non ospita le animazioni: i download rimandano
+    alle pagine originali dei rispettivi creator.
+</div>
 
-    <div class="table-wrap">
-        <table id="animationsTable">
-            <thead>
-                <tr>
-                    <th>AUTORE</th>
-                    <th>PACCHETTI TROVATI</th>
-                    <th>STATO</th>
-                    <th>ULTIMO AGGIORNAMENTO</th>
-                    <th>PAGINA ORIGINALE</th>
-                </tr>
-            </thead>
+<div class="controls">
 
-            <tbody>
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Cerca un creator..."
+        onkeyup="filterTable()"
+    >
 
-                <tr data-status="verifica">
-                    <td class="author">Beebavel</td>
-                    <td class="packages">WickedWhimsAnimation</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+    <select id="creatorFilter" onchange="filterTable()">
+        <option value="all">Tutti i creator</option>
+        <option value="nevely42">Nevely42</option>
+        <option value="0nizu">0nizu</option>
+        <option value="creamydelicious">Creamydelicious</option>
+        <option value="anarcis">Anarcis</option>
+        <option value="fruitydelicious">Fruitydelicious</option>
+        <option value="ooolala">OOOLALA World</option>
+        <option value="sexylunella">SexyLunella</option>
+        <option value="greynaya">GreyNaya</option>
+        <option value="lupobianco">Lupobianco</option>
+        <option value="beebavel">Beebavel</option>
+    </select>
 
-                <tr data-status="verifica">
-                    <td class="author">Lupobianco</td>
-                    <td class="packages">
-                        Legacy Pack Old<br>
-                        Starting Pack WickedWhims
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+</div>
 
-                <tr data-status="verifica">
-                    <td class="author">OLL</td>
-                    <td class="packages">Animations (AP)</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<div class="table-wrap">
 
-                <tr data-status="verifica">
-                    <td class="author">0nizu</td>
-                    <td class="packages">
-                        WW_0nizu_Animations<br>
-                        WW_0nizu_Group_Animations
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<table id="animationsTable">
 
-                <tr data-status="verifica">
-                    <td class="author">Anarcis</td>
-                    <td class="packages">WW_Anarcis</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<thead>
+<tr>
+    <th>CREATOR</th>
+    <th>PACCHETTO</th>
+    <th>FONTE</th>
+    <th>PAGINA ORIGINALE</th>
+</tr>
+</thead>
 
-                <tr data-status="verifica">
-                    <td class="author">Azmodan22</td>
-                    <td class="packages">
-                        Animations Normal<br>
-                        Animations Rough<br>
-                        Animations Platinum Normal<br>
-                        Animations Platinum Rough
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tbody>
 
-                <tr data-status="disponibile">
-                    <td class="author">CIPHER UVS</td>
-                    <td class="packages">
-                        CIPHER UVS Animations<br>
-                        CIPHER Animations
-                    </td>
-                    <td><span class="badge available">PAGINA DISPONIBILE</span></td>
-                    <td>Controlla la pagina</td>
-                    <td>
-                        <a class="button"
-                           href="https://wicked.cc/animations/cipher/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                           VISITA
-                        </a>
-                    </td>
-                </tr>
+<tr data-creator="nevely42">
+    <td class="author">Nevely42</td>
+    <td class="package">WW_Nevely42_Animations</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/nevely42/nevely42s-animations"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">Creamydelicious</td>
-                    <td class="packages">
-                        Animations<br>
-                        Simlish Animations
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="0nizu">
+    <td class="author">0nizu</td>
+    <td class="package">
+        WW_0nizu_Animations<br>
+        WW_0nizu_Group_Animations
+    </td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/0nizu/0nizu-animations-for-wickedwhims"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">Fruitydelicious</td>
-                    <td class="packages">Animations</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="creamydelicious">
+    <td class="author">Creamydelicious</td>
+    <td class="package">
+        WW_Creamydelicious_Simlish_Animations
+    </td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/creamydelicious/creamydelicious-animations"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">GreyNaya</td>
-                    <td class="packages">Animations</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="anarcis">
+    <td class="author">Anarcis</td>
+    <td class="package">WW_Anarcis</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/anarcis/anarcis-animations-for-wickedwhims"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">Mike24</td>
-                    <td class="packages">
-                        Animations<br>
-                        Classic<br>
-                        DarkFantasies<br>
-                        DF
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="fruitydelicious">
+    <td class="author">Fruitydelicious</td>
+    <td class="package">WW_Fruitydelicious_Animations</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/fruitydelicious/%f0%9d%93%95%f0%9d%93%bb%f0%9d%93%be%f0%9d%93%b2%f0%9d%93%bd%f0%9d%94%82%f0%9d%93%ad%f0%9d%93%ae%f0%9d%93%b5%f0%9d%93%b2%f0%9d%93%ac%f0%9d%93%b2%f0%9d%93%b8%f0%9d%93%be%f0%9d%93%bc-animations-v2-8"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="disponibile">
-                    <td class="author">Nevely42</td>
-                    <td class="packages">WW_Nevely42_Animations</td>
-                    <td><span class="badge available">PAGINA DISPONIBILE</span></td>
-                    <td>18/09/2026</td>
-                    <td>
-                        <a class="button"
-                           href="https://wicked.cc/animations/nevely42/nevely42s-animations"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                           VISITA
-                        </a>
-                    </td>
-                </tr>
+<tr data-creator="ooolala">
+    <td class="author">OOOLALA World</td>
+    <td class="package">OLL Animations (AP)</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/ooolalaworld/450-anims-ooolala-worlds-sex-animations-for-wickedwhims-ts4"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">SexyLunella</td>
-                    <td class="packages">
-                        Animations<br>
-                        Rough Animations
-                    </td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="sexylunella">
+    <td class="author">SexyLunella</td>
+    <td class="package">
+        WW_SexyLunella_Animations<br>
+        WW_SexyLunella_Rough_Animations
+    </td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/sexylunella/may-update-sexylunella-animations-for-wickedwhims-350-anims"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-                <tr data-status="verifica">
-                    <td class="author">Yummy-o-Tummy</td>
-                    <td class="packages">Animation Pack #65</td>
-                    <td><span class="badge verify">LINK IN VERIFICA</span></td>
-                    <td>—</td>
-                    <td><span class="disabled">DA VERIFICARE</span></td>
-                </tr>
+<tr data-creator="greynaya">
+    <td class="author">GreyNaya</td>
+    <td class="package">WW_GreyNaya_Animations</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/greynaya/greynaya-animations"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-            </tbody>
-        </table>
-    </div>
+<tr data-creator="lupobianco">
+    <td class="author">Lupobianco</td>
+    <td class="package">
+        lupobianco_startingpack_wickedwhims<br>
+        lupobianco_legacy_pack_old
+    </td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/lupobianco/lupobianco-animations"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-    <div class="note">
-        <strong>Nota Aiznun:</strong>
-        i contenuti appartengono ai rispettivi creator.
-        Aiznun non ospita né rivendica la proprietà delle animazioni.
-        I collegamenti disponibili rimandano alle pagine originali.
-        Le date e i collegamenti vengono indicati solo quando verificati.
-    </div>
+<tr data-creator="beebavel">
+    <td class="author">Beebavel</td>
+    <td class="package">Beebavel_WickedWhimsAnimation</td>
+    <td><span class="badge">WICKEDCC</span></td>
+    <td>
+        <a class="button"
+           href="https://wicked.cc/animations/beebavel/beebavel-animations-vanilla-harem-yaoi-bdsm"
+           target="_blank"
+           rel="noopener noreferrer">
+           VISITA / DOWNLOAD
+        </a>
+    </td>
+</tr>
 
-    <div class="back">
-        <a href="mod.html#adult">← TORNA ALLA SEZIONE +18</a>
-    </div>
+</tbody>
+</table>
+
+</div>
+
+<div class="note">
+    <strong>Nota Aiznun:</strong>
+    le animazioni appartengono ai rispettivi creator.
+    Aiznun raccoglie e organizza i collegamenti per facilitarne
+    la ricerca e rimanda sempre alla pagina originale per il download.
+</div>
+
+<div class="back">
+    <a href="mod.html#adult">← TORNA ALLA SEZIONE +18</a>
+</div>
 
 </main>
 
 <footer>
-    AIZNUN • Fan site dedicato a The Sims 4<br><br>
+    AIZNUN • Fan site dedicato a The Sims 4
+    <br><br>
     Non affiliato con Electronic Arts o Maxis.
 </footer>
 
 <script>
 function filterTable() {
-    const search =
-        document.getElementById("searchInput").value.toLowerCase();
 
-    const status =
-        document.getElementById("statusFilter").value;
+    const search =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const creator =
+        document.getElementById("creatorFilter")
+        .value;
 
     const rows =
-        document.querySelectorAll("#animationsTable tbody tr");
+        document.querySelectorAll(
+            "#animationsTable tbody tr"
+        );
 
     rows.forEach(row => {
-        const text = row.innerText.toLowerCase();
-        const rowStatus = row.dataset.status;
 
-        const matchesSearch = text.includes(search);
-        const matchesStatus =
-            status === "all" || rowStatus === status;
+        const text =
+            row.innerText.toLowerCase();
+
+        const rowCreator =
+            row.dataset.creator;
+
+        const matchesSearch =
+            text.includes(search);
+
+        const matchesCreator =
+            creator === "all" ||
+            creator === rowCreator;
 
         row.style.display =
-            matchesSearch && matchesStatus ? "" : "none";
+            matchesSearch && matchesCreator
+            ? ""
+            : "none";
     });
 }
 </script>
