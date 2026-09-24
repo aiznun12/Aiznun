@@ -1,188 +1,560 @@
-aiznun12
-Aiznun
-Repository navigation
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Aiznun
-/
-Name your file...
-in
-main
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Edit
+<title>Aiznun | The Sims 4</title>
 
-Preview
-Indent mode
+<style>
 
-Spaces
-Indent size
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-2
-Line wrap mode
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #faf7ff;
+    color: #33243f;
+}
 
-No wrap
-Editing file contents
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
+/* HEADER */
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 42px;
-            }
+header {
+    background: linear-gradient(135deg, #cda9f5, #8f5fc4);
+    color: white;
+    text-align: center;
+    padding: 55px 20px 45px;
+}
 
-            nav a {
-                display: block;
-                margin: 10px;
-            }
-        }
-    </style>
+.logo {
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+/* NAV */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 3px 15px rgba(90,50,120,0.12);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #603b7d;
+    text-decoration: none;
+    padding: 18px 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #eee1ff;
+    color: #8b4fc0;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 70px 30px;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #eee2ff, #d5b8f5);
+    box-shadow: 0 10px 35px rgba(110,70,150,0.15);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+    color: #573174;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 28px;
+    background: #7b4aa5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #603680;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+section {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #633c80;
+    margin-bottom: 35px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(80,50,100,0.10);
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #eee3f8;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(90,50,120,0.18);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #704493;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #665d6c;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(80,50,100,0.10);
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    color: #5d5363;
+}
+
+/* LATEST */
+
+.latest {
+    background: #f0e6fa;
+    padding: 45px;
+    border-radius: 25px;
+}
+
+.latest-item {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.latest-item strong {
+    color: #633c80;
+}
+
+.latest-item span {
+    background: #dcc5f2;
+    color: #603b7d;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    padding: 35px 20px;
+    background: #33243f;
+    color: #ddd;
+    text-align: center;
+}
+
+footer strong {
+    color: #cba4ef;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .logo {
+        font-size: 42px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+
+    .latest-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>AIZNUN</h1>
-    <p>The Sims 4 • Mod • Traduzioni • CC</p>
+<header id="home">
+
+    <div class="logo">AIZNUN</div>
+
+    <div class="subtitle">
+        THE SIMS 4 • MOD • TRADUZIONI • CC
+    </div>
+
 </header>
 
+
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Traduzioni</a>
-    <a href="#">Mod</a>
-    <a href="#">CC</a>
-    <a href="#">Guide</a>
-    <a href="#">Contatti</a>
+
+    <a href="#home">Home</a>
+    <a href="#traduzioni">Traduzioni</a>
+    <a href="#mod">Mod</a>
+    <a href="#cc">CC</a>
+    <a href="#guide">Guide</a>
+    <a href="#contatti">Contatti</a>
+
 </nav>
 
+
 <section class="hero">
-    <h2>Benvenuti su Aiznun 💜</h2>
+
+    <h1>Benvenuti su Aiznun</h1>
 
     <p>
-        Un piccolo spazio dedicato a The Sims 4,
-        alle mod, alle traduzioni italiane e a tutto ciò
-        che rende il nostro gioco ancora più bello.
+        Il mio piccolo angolo dedicato a The Sims 4,
+        dove trovare traduzioni, mod, contenuti personalizzati,
+        guide e tutto ciò che rende il gioco ancora più speciale.
     </p>
-</section>
 
-<section class="cards">
-
-    <div class="card">
-        <h3>Traduzioni</h3>
-        <p>
-            Scopri le traduzioni italiane delle tue mod preferite.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Mod</h3>
-        <p>
-            Una raccolta di mod e contenuti interessanti per The Sims 4.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>CC</h3>
-        <p>
-            Idee e contenuti personalizzati per creare il tuo mondo.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Guide</h3>
-        <p>
-            Guide e consigli per vivere al meglio le tue partite.
-        </p>
-    </div>
+    <a href="#traduzioni" class="button">
+        Scopri le traduzioni
+    </a>
 
 </section>
+
+
+<section id="traduzioni">
+
+    <h2 class="section-title">Ultime traduzioni</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">✦</div>
+
+            <h3>Traduzioni Mod</h3>
+
+            <p>
+                Traduzioni italiane per le tue mod preferite di The Sims 4.
+            </p>
+
+            <a href="#" class="button">
+                Scopri
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">♡</div>
+
+            <h3>Nuove traduzioni</h3>
+
+            <p>
+                Una raccolta sempre aggiornata delle traduzioni disponibili.
+            </p>
+
+            <a href="#" class="button">
+                Vedi tutte
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">✧</div>
+
+            <h3>Mod consigliate</h3>
+
+            <p>
+                Mod interessanti per arricchire e personalizzare il tuo gioco.
+            </p>
+
+            <a href="#mod" class="button">
+                Scopri
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="mod">
+
+    <h2 class="section-title">Mod</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">♛</div>
+
+            <h3>Gameplay</h3>
+
+            <p>
+                Mod che aggiungono nuove possibilità al gameplay.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">☾</div>
+
+            <h3>Fantasy</h3>
+
+            <p>
+                Regni, magia, creature e avventure per il tuo mondo Sims.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">♡</div>
+
+            <h3>Romance</h3>
+
+            <p>
+                Nuove interazioni e contenuti dedicati alle relazioni.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="cc">
+
+    <h2 class="section-title">Custom Content</h2>
+
+    <div class="about">
+
+        <p>
+            Una sezione dedicata al Custom Content di The Sims 4:
+            capelli, vestiti, arredamento, makeup e tanto altro.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="guide">
+
+    <h2 class="section-title">Guide</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">♡</div>
+
+            <h3>Guide per principianti</h3>
+
+            <p>
+                Consigli semplici per iniziare a giocare e scoprire The Sims 4.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">⚙</div>
+
+            <h3>Mod e CC</h3>
+
+            <p>
+                Come installare, organizzare e gestire mod e contenuti personalizzati.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">✦</div>
+
+            <h3>Consigli</h3>
+
+            <p>
+                Trucchi, suggerimenti e idee per rendere il tuo gioco ancora più divertente.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">Ultimi aggiornamenti</h2>
+
+    <div class="latest">
+
+        <div class="latest-item">
+
+            <strong>Nuova traduzione disponibile</strong>
+
+            <span>TRADUZIONE</span>
+
+        </div>
+
+
+        <div class="latest-item">
+
+            <strong>Nuove mod in arrivo</strong>
+
+            <span>MOD</span>
+
+        </div>
+
+
+        <div class="latest-item">
+
+            <strong>Aiznun è online!</strong>
+
+            <span>NEWS</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contatti">
+
+    <h2 class="section-title">Contatti</h2>
+
+    <div class="contact">
+
+        <p>
+            Per collaborazioni, richieste o semplicemente per scrivermi,
+            puoi contattarmi qui.
+        </p>
+
+        <a href="mailto:inserisci-la-tua-email@example.com" class="button">
+            Scrivimi
+        </a>
+
+    </div>
+
+</section>
+
 
 <footer>
-    © 2026 Aiznun — The Sims 4
+
+    <p>
+        © 2026 <strong>Aiznun</strong> — Fan site dedicato a The Sims 4
+    </p>
+
+    <p>
+        Non affiliato con Electronic Arts o Maxis.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
